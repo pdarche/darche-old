@@ -49,24 +49,29 @@ body {
   }
 }
 
-ul#nav {
-  width: 400px;
-  margin: 0px auto;
+#nav {
+  border-right: 1px solid #eee;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  width: 100px;
+
+  ul {
+    list-style-type:none;
+    margin-top: 40px;
+    padding: 0px;
+  }
 
   li {
-    width: 100px;
-    text-align:center;
-    list-style-type: none;
-    display: inline-block;
-
-    a {
-      height: 100%;
-      width:100%;
-      background-color: rgba(255,255,255,.4);
-      border-radius: 5px;
-      padding: 10px 20px;
-    }
+    padding: 10px 0px 0px 10px;
+    color: #999
   }
+}
+
+/* this should be a mixin! */
+.big-serif {
+  font-family: Georgia, "Cambria", serif;
+  font-size: 18px; 
 }
 
 #container {
@@ -85,7 +90,7 @@ ul#nav {
 }
 
 .post {
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
   margin-bottom: 20px;
   padding-bottom: 20px;
 
