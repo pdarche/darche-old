@@ -1,0 +1,6 @@
+http://hellomonday.com/ - good use of css transitions.  clean flat designs
+http://toolofna.com/#!/home - nice clean text over full screen video.  i like the overlay of other elements in front of content (sno)
+https://www.google.com/intl/en/chrome/ - nice infite shadow space with hovering element and shadow.  nice variable shadows of menus
+http://www.aquest.it/ - nice tile style. a little poloroid-like but still good - don't like how you have to see the intro video each time
+LOOK INTO KINETIC.JS
+http://watsondg.com/archive/2012/lincoln/?videos - nice nested menus

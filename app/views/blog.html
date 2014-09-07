@@ -1,0 +1,18 @@
+<div id="tacos">
+	<article ng-repeat="post in posts">
+	  <header>
+	    <hgroup>
+	      <h1>Tacos</h1>
+	      <h1 class="title">{{post.title}}</h1>
+	      <h2 class="subtitle">{{post.subTitle}}</h2>
+	    </hgroup>
+	    <p><time datetime="{{post.postTime}}"></time></p>
+	    <ul>
+	    	<li ng-repeat"tag in post.tags">{{ tag }}</li>
+	    </ul>
+	  </header>
+	  <div class="body">
+	  	{{ body }}
+	  </div>
+	</article>
+</div>
