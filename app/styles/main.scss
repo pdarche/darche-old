@@ -69,17 +69,49 @@ ul#nav {
   }
 }
 
-.posts {
-  width: 66%;
+#container {
+  width:66%;
   margin: 0px auto;
   padding: 20px;
+}
+
+.page-title {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.posts {
+  width: 100%;
 }
 
 .post {
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
   padding-bottom: 20px;
+
+  .post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+  }
+
+  .post-description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em
+  }
+
+  .post-body {
+    border-top: 1px solid #eee;
+    font-family: Georgia, "Cambria", serif;
+    font-size: 18px;
+    margin: 20px auto;
+    padding-top: 20px;
+    width: 80%;
+  }
 }
+
+
 
 .header,
 .marketing,
