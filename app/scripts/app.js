@@ -34,7 +34,7 @@ angular
       .when('/blog/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl'
-      })      
+      })
       .otherwise({
         redirectTo: '/'
       });
