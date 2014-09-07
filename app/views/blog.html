@@ -1,15 +1,13 @@
-<div id="tacos">
-	<article ng-repeat="post in posts">
+<div class="posts">
+	<article class="post" ng-repeat="post in posts">
 	  <header>
-	    <hgroup>
-	      <h1 class="title">{{post.title}}</h1>
-	      <h2 class="subtitle">{{post.subTitle}}</h2>
-	    </hgroup>
-	    <p><time datetime="{{post.postTime}}"></time></p>
-	    <ul>
-	    	<li ng-repeat"tag in post.tags"> <p ng-model="tag">{{ tag }}</p></li>
-	    </ul>
+	    <h2 class="post-title"><a href="#blog/{{post.slug}}">{{post.title}}</a></h2>
+	    <p class="post-meta">
+	    	<time datetime="{{post.timestamp}}">{{post.timestamp}}</time>
+	    </p>
 	  </header>
-	  <div class="body">{{ body }}</div>
+	  <div class="post-description">
+	  	{{post.description}}
+	  </div>
 	</article>
 </div>

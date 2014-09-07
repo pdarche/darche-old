@@ -10,12 +10,10 @@
 angular.module('darcheApp')
   .controller('BlogCtrl', function ($scope) {
     $scope.posts = [
-      {title: 'Test', subTitle: 'Test Subtitle', postTime: '2014-09-06', body:'Some really cool stuff', tags: ['one', 'two', 'three']},
-      {title: 'Test', subTitle: 'Test Subtitle', postTime: '2014-09-06', body:'Some really cool stuff', tags: ['one', 'two', 'three']},
-      {title: 'Test', subTitle: 'Test Subtitle', postTime: '2014-09-06', body:'Some really cool stuff', tags: ['one', 'two', 'three']}
+      {title: 'Test', timestamp: '2014-09-06', description:'Some really cool stuff', tags: ['one', 'two', 'three'], slug: 'test'},
+      {title: 'Test', timestamp: '2014-09-06', description:'Some really cool stuff', tags: ['one', 'two', 'three'], slug: 'test'},
+      {title: 'Test', timestamp: '2014-09-06', description:'Some really cool stuff', tags: ['one', 'two', 'three'], slug: 'test'},
+      {title: 'Test', timestamp: '2014-09-06', description:'Some really cool stuff', tags: ['one', 'two', 'three'], slug: 'test'},
+      {title: 'Test', timestamp: '2014-09-06', description:'Some really cool stuff', tags: ['one', 'two', 'three'], slug: 'test'}
     ];
-
-    $scope.stuffs = [
-      'first', 'second', 'third'
-    ];    
   });

@@ -30,6 +30,10 @@ angular
       .when('/blog', {
         templateUrl: 'views/blog.html',
         controller: 'BlogCtrl'
+      })
+      .when('/blog/:slug', {
+        templateUrl: 'views/post.html',
+        controller: 'PostCtrl'
       })      
       .otherwise({
         redirectTo: '/'
