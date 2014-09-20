@@ -3,7 +3,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
-
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -49,22 +48,40 @@ body {
   }
 }
 
-#nav {
-  border-right: 1px solid #eee;
+/* Left Navigation */
+div[pd-left-nav] {
   height: 100%;
-  position: fixed;
   left: 0px;
-  width: 100px;
+  position: fixed;
+  width: 10%;
 
-  ul {
-    list-style-type:none;
-    margin-top: 40px;
-    padding: 0px;
+  #nav_icon img {
+    box-sizing:border-box;
+    display: block;
+    margin: 20px auto 10px auto;
+    width: 60px;
+  }
+  .hovered {
+    border: 1px solid gray;
   }
 
-  li {
-    padding: 10px 0px 0px 10px;
-    color: #999
+  #nav_menu {
+    height: 100%;
+    left: 0%;
+    width:100%;
+
+    ul {
+      padding: 0px;
+      list-style-type: none;
+      
+      li {
+        padding: 5px 20px;
+      }
+    }
+  }
+
+  .hidden {
+    left: -10%;
   }
 }
 
