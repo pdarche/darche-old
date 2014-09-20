@@ -60,9 +60,10 @@ div[pd-left-nav] {
     display: block;
     margin: 20px auto 10px auto;
     width: 60px;
-  }
-  .hovered {
-    border: 1px solid gray;
+    
+    &:hover {
+      box-shadow: 0px 0px 10px gray;
+    }    
   }
 
   #nav_menu {
@@ -75,7 +76,7 @@ div[pd-left-nav] {
       list-style-type: none;
       
       li {
-        padding: 5px 20px;
+        padding: 5px 20px 0px 40px;
       }
     }
   }
@@ -102,6 +103,8 @@ div[pd-left-nav] {
   margin-bottom: 20px;
 }
 
+/* Blog Posts */
+
 .posts {
   width: 100%;
 }
@@ -119,6 +122,7 @@ div[pd-left-nav] {
 
   .post-description {
     font-family: Georgia, "Cambria", serif;
+    font-size: 16px;
     color: #444;
     line-height: 1.8em
   }
@@ -126,10 +130,10 @@ div[pd-left-nav] {
   .post-body {
     border-top: 1px solid #eee;
     font-family: Georgia, "Cambria", serif;
-    font-size: 18px;
+    font-size: 20px;
     margin: 20px auto;
     padding-top: 20px;
-    width: 80%;
+    /*width: 80%;*/
   }
 }
 

@@ -22,12 +22,6 @@ angular
             menu.removeClass('hidden') :
             menu.addClass('hidden');
         });
-
-        el.on('mouseenter', 'img', function(ev){
-          $(this).addClass('hovered')
-        }).on('mouseout', 'img', function(){
-          $(this).removeClass('hovered')
-        })
       }
     }
   });
