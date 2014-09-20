@@ -1,7 +1,9 @@
+{"posts": [
 {
-	"title": "REally cool Test", 
-	"timestamp": 1409961600000, 
-	"description": "Some really cool stuff 1",
-	"slug": "test",
-	"body": "This is an example test post.  I think its cool that Im trying to do some stuff but Im not sure that its going to work."
+	"title": "Starting Over", 
+	"timestamp": 1410116029045, 
+	"description":"I'm creating a new personal webisite.  I'm usually plagued by a need to have everything figured out before I try anything.  The development of this site is an exercise in getting away from that.", 
+	"body": "I'm remaking my personal webite.  As you can see it's quite spartan.  That will change.  Slowly and consistently, I hope.  As noted in the description, my natural tendency when enganging in projects is to plan.  Get everything right then implement.  Unfortunately, I'm (like most people, I presume) bad at getting everything right in this planning phase and then find myself cobbling together a half-baked projects that are larger, less complete, and less functional than I'd like.",
+	"slug": "starting-over"
 }
+]}
