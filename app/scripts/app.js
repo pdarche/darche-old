@@ -16,8 +16,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'pdDirectives'
+    'pdDirectives',
+    'pdFilters'
   ])
+  .value('md', new Showdown.converter())
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -36,7 +38,16 @@ angular
         templateUrl: 'views/post.html',
         controller: 'PostCtrl'
       })
+      .when('/blog/edit/:slug',{
+        templateUrl: 'views/edit.html',
+        controller: 'EditCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .filter('markdown', ['md', function(md){
+    return function(input){
+      if(input) return md.makeHtml(input);
+    };
+  }]);
