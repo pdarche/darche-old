@@ -1,0 +1,11 @@
+<div id="container">
+	<!-- <textarea ng-model="post.title">{{post.title}}</textarea> -->
+	<textarea id="editor" ng-model="post.body">{{post.body}}</textarea>
+	<label>Publish?</label>
+	<input type="checkbox" ng-model="post.publish"/> 
+	<div class="form-group">
+		<button class="submit" type="submit">Submit</button>
+	</div>
+	<div>{{post.title}}</div>
+	<div ng-bind-html="post.body | markdown"></div>
+</div>
