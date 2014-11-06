@@ -8,13 +8,11 @@
  * Controller of the darcheApp
  */
 angular.module('darcheApp')
-  .controller('PostCtrl', function ($scope, $routeParams, $http) {
-	$http.get('http://127.0.0.1:5984/darche/_all_docs?include_docs=true').
-	  success(function(data, status, headers, config) {
-	    // this callback will be called asynchronously
-	    // when the response is available
-	    var posts = data.rows.map(function(obj){ return obj.doc})
-	    $scope.post = posts.filter(function(post){
-	    	return post.slug === $routeParams.slug})[0];
-	  });
+  .controller('PostCtrl', function ($scope, $routeParams, $http, Post) {
+  	var posts = Post.query(function(){
+  	// I want this to be intercepted!
+	console.log('res', posts)
+    $scope.post = posts.rows.map(function(row){ return row.doc })
+    	.filter(function(post){return post.slug === $routeParams.slug})[0];
+  	})
   });
