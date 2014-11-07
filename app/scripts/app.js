@@ -34,7 +34,7 @@ angular
         templateUrl: 'views/blog.html',
         controller: 'BlogCtrl'
       })
-      .when('/blog/:slug', {
+      .when('/blog/:id', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl'
       })
@@ -42,6 +42,10 @@ angular
         templateUrl: 'views/edit.html',
         controller: 'EditCtrl'
       })
+      .when('/blog/new/post',{
+        templateUrl: 'views/edit.html',
+        controller: 'NewPostCtrl'
+      })      
       .otherwise({
         redirectTo: '/'
       });
