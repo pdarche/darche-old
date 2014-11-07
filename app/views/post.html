@@ -6,9 +6,7 @@
 			<time datetime="{{post.timestamp}}">{{post.timestamp | date:'medium'}}</time>
 		</p>
 		</header>
-		<div class="post-body">
-			{{post.body}}
-		</div>
+		<div class="post-body" ng-bind-html="post.body | markdown"></div>
 		<div class="comments"></div>
 	</article>
 </div>

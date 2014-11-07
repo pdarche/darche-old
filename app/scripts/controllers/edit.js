@@ -8,13 +8,9 @@
  * Controller 
  */
 angular.module('darcheApp')
-  .controller('EditCtrl', function ($scope, $routeParams, $http) {
-	$http.get('http://127.0.0.1:5984/darche/_all_docs?include_docs=true').
-	  success(function(data, status, headers, config) {
-	    // this callback will be called asynchronously
-	    // when the response is available
-	    var posts = data.rows.map(function(obj){ return obj.doc})
-	    $scope.post = posts.filter(function(post){
-	    	return post.slug === $routeParams.slug})[0];
-	  });
+  .controller('EditCtrl', function ($scope, $routeParams, $http, Post) {
+  	$scope.post = Post.get({id: $routeParams.id})
+  	$scope.submit = function() {
+  		Post.update({id: $scope.post._id}, $scope.post)
+  	}
   });

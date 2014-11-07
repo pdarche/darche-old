@@ -4,9 +4,11 @@
 	<textarea id="editor" ng-model="post.body">{{post.body}}</textarea>
 	<label>Publish?</label>
 	<input type="checkbox" ng-model="post.publish"/> 
-	<div class="form-group">
-		<button class="submit" type="submit">Submit</button>
-	</div>
+	<form ng-submit="submit()">
+		<div class="form-group">
+			<button class="submit" type="submit">Submit</button>
+		</div>
+	</form>
 	<h1>{{post.title}}</h1>
 	<div ng-bind-html="post.body | markdown"></div>
 </div>
