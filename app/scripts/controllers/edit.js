@@ -9,8 +9,8 @@
  */
 angular.module('darcheApp')
   .controller('EditCtrl', function ($scope, $routeParams, $http, Post) {
-  	$scope.post = Post.get({id: $routeParams.id})
+  	$scope.post = Post.get({id: $routeParams.id});
   	$scope.submit = function() {
-  		Post.update({id: $scope.post._id}, $scope.post)
+  		Post.update({id: $scope.post._id}, $scope.post);
   	}
   });

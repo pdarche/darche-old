@@ -1,7 +1,10 @@
 <div id="container">
-	<!-- <textarea ng-model="post.title">{{post.title}}</textarea> -->
-	<input id="post_title" ng-model="post.title" value="{{post.title}}"/>
-	<textarea id="editor" ng-model="post.body">{{post.body}}</textarea>
+	<label>Title</label>
+	<textarea class="post-input" ng-model="post.title">{{post.title}}</textarea>
+	<label>Description</label>
+	<textarea id="description" class="post-input" ng-model="post.description">{{post.description}}</textarea>
+	<label>Body</label>
+	<textarea id="editor" class="post-input" ng-model="post.body">{{post.body}}</textarea>
 	<label>Publish?</label>
 	<input type="checkbox" ng-model="post.publish"/> 
 	<form ng-submit="submit()">
@@ -9,6 +12,7 @@
 			<button class="submit" type="submit">Submit</button>
 		</div>
 	</form>
+	
 	<h1>{{post.title}}</h1>
 	<div ng-bind-html="post.body | markdown"></div>
 </div>

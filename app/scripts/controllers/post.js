@@ -2,16 +2,13 @@
 
 /**
  * @ngdoc function
- * @name darcheApp.controller:AboutCtrl
+ * @name darcheApp.controller:PostCtrl
  * @description
- * # AboutCtrl
+ * # PostCtrl
  * Controller of the darcheApp
  */
+
 angular.module('darcheApp')
   .controller('PostCtrl', function ($scope, $routeParams, $http, Post) {
-  	var posts = Post.query(function(){
-  	// I want this to be intercepted!
-    $scope.post = posts.rows.map(function(row){ return row.doc })
-    	.filter(function(post){return post.slug === $routeParams.slug})[0];
-  	})
+    $scope.post = Post.get({id: $routeParams.id});
   });
