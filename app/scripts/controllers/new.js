@@ -18,6 +18,10 @@ angular.module('darcheApp')
     $scope.post = new Post(postData)
     $scope.submit = function() {
       $scope.post.timestamp = new Date().getTime();
-      Post.save($scope.post)
+      Post.save($scope.post, function(data){
+        alert("Saved successfully")
+      }, function(err){
+        alert("Error!")
+      });
     }
   });
