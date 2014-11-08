@@ -9,8 +9,9 @@
  */
 angular.module('darcheApp')
   .controller('BlogCtrl', function ($scope, $http, Post) {
-    var posts = Post.query(function(){
+    var posts = Post.query({publish:true}, function(){
       // I want this to be intercepted!
-      $scope.posts = posts.rows.map(function(row){ return row.doc });
+      $scope.posts = posts.rows.map(function(row){ return row.doc })
+                        .filter(function(doc){ return doc.publish === true});
     })
   });
