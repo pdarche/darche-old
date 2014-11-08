@@ -20,8 +20,8 @@ angular.module('darcheApp')
       url: 'http://127.0.0.1:5984/darche/_all_docs',
       interceptor: {
         response: function(res){
-          res.data = res.data.rows.filter(function(row){ return row.doc });
-          return res
+          res.data = res.data.rows.filter(function(row){ return row.doc; });
+          return res;
         }
       }
     }

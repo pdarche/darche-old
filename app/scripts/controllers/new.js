@@ -14,14 +14,14 @@ angular.module('darcheApp')
       description: null,
       body: null,
       publish: false 
-    }
-    $scope.post = new Post(postData)
+    };
+    $scope.post = new Post(postData);
     $scope.submit = function() {
       $scope.post.timestamp = new Date().getTime();
       Post.save($scope.post, function(data){
-        alert("Saved successfully")
+        alert('Saved successfully');
       }, function(err){
-        alert("Error!")
+        alert('Error!');
       });
     }
   });

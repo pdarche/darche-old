@@ -11,11 +11,11 @@ angular.module('darcheApp')
   .controller('EditCtrl', function ($scope, $routeParams, $http, Post) {
     $scope.post = Post.get({id: $routeParams.id});
     $scope.submit = function() {
-      $scope.post.timestamp = new Date().getTime()
+      $scope.post.timestamp = new Date().getTime();
       Post.update({id: $scope.post._id}, $scope.post, function(data){
-        alert("Saved successfully")
+        alert("Saved successfully");
       }, function(err){
-        alert("Error!")
+        alert("Error!");
       });
     }
   });
