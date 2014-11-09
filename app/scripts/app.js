@@ -49,6 +49,10 @@ angular
       .when('/drafts',{
         templateUrl: 'views/blog.html',
         controller: 'DraftCtrl'
+      })
+      .when('/projects',{
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl'
       })      
       .otherwise({
         redirectTo: '/'
