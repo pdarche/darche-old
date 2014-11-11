@@ -39,11 +39,11 @@ angular
         controller: 'PostCtrl'
       })
       .when('/blog/edit/:id',{
-        templateUrl: 'views/edit.html',
+        templateUrl: 'views/editPost.html',
         controller: 'EditPostCtrl'
       })
       .when('/blog/new/post',{
-        templateUrl: 'views/edit.html',
+        templateUrl: 'views/editPost.html',
         controller: 'NewPostCtrl'
       })
       .when('/drafts/blog',{
@@ -59,11 +59,11 @@ angular
         controller: 'ProjectCtrl'
       })
       .when('/projects/edit/:id',{
-        templateUrl: 'views/edit.html',
+        templateUrl: 'views/editProject.html',
         controller: 'EditProjectCtrl'
       })      
       .when('/projects/new/project',{
-        templateUrl: 'views/edit.html',
+        templateUrl: 'views/editProject.html',
         controller: 'NewProjectCtrl'
       })
       .when('/drafts/projects',{
