@@ -48,7 +48,7 @@ angular
       })
       .when('/drafts',{
         templateUrl: 'views/blog.html',
-        controller: 'DraftCtrl'
+        controller: 'DraftPostCtrl'
       })
       .when('/projects',{
         templateUrl: 'views/projects.html',
