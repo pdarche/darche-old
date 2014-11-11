@@ -8,7 +8,7 @@
  * Controller of the darcheApp
  */
 angular.module('darcheApp')
-  .controller('BlogCtrl', function ($scope, $http, Post) {
+  .controller('ProjectsCtrl', function ($scope, $http, Project) {
     var projects = Project.query({publish:true}, function(){
       // I want this to be intercepted!
       $scope.projects = projects.rows.map(function(row){ return row.doc; })

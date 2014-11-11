@@ -4,11 +4,11 @@
  * @ngdoc function
  * @name darcheApp.controller:EditCtrl
  * @description
- * # EditCtrl
+ * # EditPostCtrl
  * Controller 
  */
 angular.module('darcheApp')
-  .controller('EditCtrl', function ($scope, $routeParams, $http, Post) {
+  .controller('EditPostCtrl', function ($scope, $routeParams, $http, Post) {
     $scope.post = Post.get({id: $routeParams.id});
     $scope.submit = function() {
       $scope.post.timestamp = new Date().getTime();

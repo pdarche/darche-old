@@ -40,19 +40,35 @@ angular
       })
       .when('/blog/edit/:id',{
         templateUrl: 'views/edit.html',
-        controller: 'EditCtrl'
+        controller: 'EditPostCtrl'
       })
       .when('/blog/new/post',{
         templateUrl: 'views/edit.html',
         controller: 'NewPostCtrl'
       })
-      .when('/drafts',{
+      .when('/drafts/blog',{
         templateUrl: 'views/blog.html',
         controller: 'DraftPostCtrl'
       })
       .when('/projects',{
         templateUrl: 'views/projects.html',
         controller: 'ProjectsCtrl'
+      })
+      .when('/project/:id', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl'
+      })
+      .when('/projects/edit/:id',{
+        templateUrl: 'views/edit.html',
+        controller: 'EditProjectCtrl'
+      })      
+      .when('/projects/new/project',{
+        templateUrl: 'views/edit.html',
+        controller: 'NewProjectCtrl'
+      })
+      .when('/drafts/projects',{
+        templateUrl: 'views/blog.html',
+        controller: 'DraftProjectCtrl'
       })      
       .otherwise({
         redirectTo: '/'

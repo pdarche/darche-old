@@ -9,7 +9,7 @@
  */
 angular.module('darcheApp')
   .controller('NewPostCtrl', function ($scope, $routeParams, $http, Post) {
-    var postData = {
+    var postConfig = {
       title: null,
       description: null,
       body: null,
@@ -17,7 +17,7 @@ angular.module('darcheApp')
       updates: [],      
       publish: false 
     };
-    $scope.post = new Post(postData);
+    $scope.post = new Post(postConfig);
     $scope.submit = function() {
       $scope.post.timestamp = new Date().getTime();
       Post.save($scope.post, function(data){

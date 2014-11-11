@@ -19,7 +19,6 @@ angular.module('darcheApp')
     };
     $scope.project = new Project(projectConfig);
     $scope.submit = function() {
-      // if the route is 'new', create the project
       $scope.project.timestamp = new Date().getTime();
       Project.save($scope.project, function(data){
         alert('Saved successfully');
