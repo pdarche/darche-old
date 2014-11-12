@@ -1,17 +1,6 @@
 <div id="container">
 	<h1 class="page-title">Blog</h1>
 	<div class="posts">
-		<article class="post" ng-repeat="post in posts">
-		  <header>
-		    <h2 class="post-title"><a href="#blog/{{post._id}}">{{post.title}}</a></h2>
-		    <p class="post-meta">
-		    	<time datetime="{{post.timestamp}}">{{post.timestamp | date:'medium'}}</time>
-		    	<a href="#blog/edit/{{post._id}}">Edit</a
-		    </p>
-		  </header>
-		  <div class="post-description">
-		  	{{post.description}}
-		  </div>
-		</article>
+		<pd-post></pd-post>
 	</div>
 </div>
