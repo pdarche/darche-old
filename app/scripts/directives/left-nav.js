@@ -19,7 +19,7 @@ angular
           var menu = $('#nav_menu');
           
           menu.hasClass('hidden') ? 
-            menu.removeClass('hidden') :
+            menu.removeClass('hidden') : 
             menu.addClass('hidden');
         });
       }

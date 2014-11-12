@@ -74,7 +74,7 @@ angular
         redirectTo: '/'
       });
   })
-  .filter('markdown', ['md', function(md){
+  .filter('markdown', ['md', function(md) {
     return function(input){
       if(input) return md.makeHtml(input);
     };
