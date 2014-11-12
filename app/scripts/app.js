@@ -67,7 +67,7 @@ angular
         controller: 'NewProjectCtrl'
       })
       .when('/drafts/projects',{
-        templateUrl: 'views/blog.html',
+        templateUrl: 'views/projects.html',
         controller: 'DraftProjectCtrl'
       })      
       .otherwise({
