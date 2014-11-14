@@ -16,7 +16,7 @@ angular.module('darcheApp')
       $scope.project.updates.push(updateTime)
       // add any comments to the comments array
       // $scope.project.comments = scope.project.comments.split(', ')
-      Project.update({id: $scope.post._id}, $scope.project, function(data){
+      Project.update({id: $scope.project._id}, $scope.project, function(data){
         alert("Saved successfully");
       }, function(err){
         alert("Error!");

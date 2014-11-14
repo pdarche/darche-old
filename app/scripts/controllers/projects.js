@@ -14,14 +14,14 @@ angular.module('darcheApp')
       $scope.projects = projects.rows.map(function(row){ return row.doc; })
                           .filter(function(doc){ return doc.publish === true; });
 
-      $scope.delete = function(project, cb) {
+      $scope.delete = function(project) {
         if (confirm("Are you sure you want to delete this project?")){
           Project.remove({id: project._id, rev: project._rev}, function(success){
-            cb()
+            _.remove($scope.projects, project)
           }, function(err){
-
+            console.log("Sorry, couldn't delete the post!")
           })
         }
       }                     
-    })
+    });
   });

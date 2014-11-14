@@ -17,7 +17,7 @@ angular
       templateUrl: 'views/partials/post.html',
       link: function(scope, el, attrs){
         var del = el.find('.delete')
-
+        console.log('the scope is', scope)
         del.on('click', function(ev){
           ev.preventDefault()
           scope.delete(scope.post, function(){

@@ -120,29 +120,29 @@ div[pd-left-nav] {
 
 /* Blog Posts */
 
-.posts {
+.posts, .projects {
   width: 100%;
 }
 
-.post {
+.post, .project {
   /*border-bottom: 1px solid #eee;*/
   margin-bottom: 20px;
   padding-bottom: 20px;
 
-  .post-meta {
+  .post-meta, .project-meta {
     color: #999;
     font-size: 90%;
     margin: 0;
   }
 
-  .post-description {
+  .post-description, .project-description {
     font-family: Georgia, "Cambria", serif;
     font-size: 16px;
     color: #444;
     line-height: 1.8em
   }
 
-  .post-body {
+  .post-body, .project-body {
     border-top: 1px solid #eee;
     font-family: Georgia, "Cambria", serif;
     font-size: 20px;
