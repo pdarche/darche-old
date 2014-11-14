@@ -14,7 +14,7 @@ angular
   .directive('pdProject', function(){
     return {
       restrict: 'AEC',
-      templateUrl: 'views/project.html',
+      templateUrl: 'views/partials/project.html',
       link: function(scope, el, attrs){
         var del = el.find('.delete')
         console.log('scope', scope)

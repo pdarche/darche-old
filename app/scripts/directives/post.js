@@ -14,7 +14,7 @@ angular
   .directive('pdPost', function(){
     return {
       restrict: 'AEC',
-      templateUrl: 'views/post.html',
+      templateUrl: 'views/partials/post.html',
       link: function(scope, el, attrs){
         var del = el.find('.delete')
 

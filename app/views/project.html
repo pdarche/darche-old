@@ -1,13 +1,12 @@
-<article class="project">
-  <header>
-    <h2 class="project-title"><a href="#/projects/{{project._id}}">{{project.title}}</a></h2>
-    <p class="project-meta">
-      <time datetime="{{project.timestamp}}">{{project.timestamp | date:'medium'}}</time>
-      <a href="#projects/edit/{{project._id}}">Edit</a>
-      <a href="#" class="delete">Delete</a>
-    </p>
-  </header>
-  <div class="project-description">
-    {{project.description}}
-  </div>
-</article>
+<div id="container">
+  <article class="project">
+    <header>
+      <h1 class="project-title page-title">{{project.title}}</h1>
+      <p class="project-meta">
+        <time datetime="{{project.timestamp}}">{{project.timestamp | date:'medium'}}</time>
+      </p>
+    </header>
+    <div class="project-body" ng-bind-html="project.body | markdown"></div>
+    <div class="comments"></div>
+  </article>
+</div>
