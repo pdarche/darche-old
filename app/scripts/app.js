@@ -54,7 +54,7 @@ angular
         templateUrl: 'views/projects.html',
         controller: 'ProjectsCtrl'
       })
-      .when('/project/:id', {
+      .when('/projects/:id', {
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl'
       })

@@ -17,7 +17,7 @@ angular
       templateUrl: 'views/partials/project.html',
       link: function(scope, el, attrs){
         var del = el.find('.delete')
-        console.log('scope', scope)
+        
         del.on('click', function(ev){
           ev.preventDefault()
           scope.delete(scope.project, function(){
