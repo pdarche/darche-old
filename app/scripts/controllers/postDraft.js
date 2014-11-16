@@ -14,7 +14,6 @@ angular.module('darcheApp')
       $scope.posts = posts.rows.map(function(row){ return row.doc; })
                         .filter(function(doc){ return doc.publish === false; });
       
-
       $scope.delete = function(post) {
         if (confirm("Are you sure you want to delete this project?")){
           Post.remove({id: post._id, rev: post._rev}, function(success){

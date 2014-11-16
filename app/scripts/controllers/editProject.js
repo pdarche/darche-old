@@ -23,10 +23,9 @@ angular.module('darcheApp')
       });
     }
 
-    $scope.delete = function(project, cb) {
+    $scope.delete = function(project) {
       if (confirm("Are you sure you want to delete this project?")){
         Project.remove({id: project._id, rev: project._rev}, function(success){
-          cb();
         }, function(err){
           alert('Sorry, something went wrong!');
         });
