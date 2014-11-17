@@ -15,7 +15,7 @@ angular
     return {  
       templateUrl: 'views/nav.html',
       link: function(scope, el, attrs){
-        el.on('click', 'img', function(ev){
+        el.on('click', 'img', function(){
           var menu = $('#nav_menu');
           
           menu.hasClass('hidden') ? 

@@ -3,8 +3,8 @@
     <h2 class="post-title"><a href="#blog/{{post._id}}">{{post.title}}</a></h2>
     <p class="post-meta">
     	<time datetime="{{post.timestamp}}">{{post.timestamp | date:'medium'}}</time>
-    	<a href="#blog/edit/{{post._id}}">Edit</a>
-      <a href="#" class="delete">Delete</a>
+    	<a ng-if="$root.loggedIn" href="#blog/edit/{{post._id}}">Edit</a>
+      <a ng-if="$root.loggedIn" href="#" class="delete">Delete</a>
     </p>
   </header>
   <div class="post-description">
