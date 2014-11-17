@@ -10,6 +10,7 @@
 angular.module('darcheApp')
   .controller('EditProjectCtrl', function ($scope, $routeParams, $http, Project) {
     $scope.project = Project.get({id: $routeParams.id});
+    
     $scope.submit = function() {
       var updateTime = new Date().getTime();
       // push update time to updates array

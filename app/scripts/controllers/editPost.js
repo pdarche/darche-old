@@ -10,6 +10,7 @@
 angular.module('darcheApp')
   .controller('EditPostCtrl', function ($scope, $routeParams, $http, Post) {
     $scope.post = Post.get({id: $routeParams.id});
+    
     $scope.submit = function() {
       var updateTime = new Date().getTime();
       // push update time to updates array

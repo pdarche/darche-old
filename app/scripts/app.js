@@ -10,6 +10,7 @@
  */
 angular
   .module('darcheApp', [
+    'http-auth-interceptor',
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -17,7 +18,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'pdDirectives',
-    'pdFilters'
+    'pdFilters',
+    'login'
   ])
   .value('md', new Showdown.converter())
   .config(function ($routeProvider) {
@@ -69,7 +71,11 @@ angular
       .when('/drafts/projects',{
         templateUrl: 'views/projects.html',
         controller: 'DraftProjectCtrl'
-      })      
+      })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
