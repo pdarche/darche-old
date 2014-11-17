@@ -3,8 +3,8 @@
     <h2 class="project-title"><a href="#/projects/{{project._id}}">{{project.title}}</a></h2>
     <p class="project-meta">
       <time datetime="{{project.timestamp}}">{{project.timestamp | date:'medium'}}</time>
-      <a href="#projects/edit/{{project._id}}">Edit</a>
-      <a href="#" class="delete">Delete</a>
+      <a ng-if="$root.loggedIn" href="#projects/edit/{{project._id}}">Edit</a>
+      <a ng-if="$root.loggedIn" href="#" class="delete">Delete</a>
     </p>
   </header>
   <div class="project-description">
