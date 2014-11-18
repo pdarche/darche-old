@@ -18,6 +18,7 @@ angular.module('darcheApp')
       method: 'GET',
       params: {include_docs: true},
       url: 'http://127.0.0.1:5984/project/_all_docs',
+      headers: {'Access-Control-Allow-Origin':'*'},
       interceptor: {
         response: function(res){
           res.data = res.data.rows.filter(function(row){ return row.doc; });
