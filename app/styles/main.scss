@@ -25,6 +25,18 @@ body {
   /*background-image: url('/images/brushed/brushed.png');*/
 }
 
+#login_form {
+  width: 40%;
+  margin: 20px auto;
+  padding: 10px;
+
+  input {
+    width: 100%;
+    margin: 5px 0px;
+    height: 40px;
+  }
+}
+
 #name {
   p {
     font-size: 200px;

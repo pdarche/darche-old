@@ -27,7 +27,7 @@ angular
       return {
         'request': function(request) {
           // if we're not logged-in to the AngularJS app, redirect to login page
-          var protectedRoutes = /new|edit|drafts/g
+          var protectedRoutes = /new|edit|drafts/g;
           $rootScope.loggedIn = $rootScope.loggedIn || $rootScope.username;
           if (!$rootScope.loggedIn && $location.path().search(protectedRoutes) !== -1) {
             $location.path('/login');
