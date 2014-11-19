@@ -22,7 +22,29 @@ angular
     'login'
   ])
   .value('md', new Showdown.converter())
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $httpProvider) {
+    $httpProvider.interceptors.push(function($rootScope, $location, $q) {
+      return {
+        'request': function(request) {
+          // if we're not logged-in to the AngularJS app, redirect to login page
+          var protectedRoutes = /new|edit|drafts/g
+          $rootScope.loggedIn = $rootScope.loggedIn || $rootScope.username;
+          if (!$rootScope.loggedIn && $location.path().search(protectedRoutes) !== -1) {
+            $location.path('/login');
+          }
+          return request;
+        },
+        'responseError': function(rejection) {
+          // if we're not logged-in to the web service, redirect to login page
+          if (rejection.status === 401 && $location.path() != '/login') {
+            $rootScope.loggedIn = false;
+            $location.path('/login');
+          }
+          return $q.reject(rejection); 
+        }
+      };
+    });
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -76,9 +98,6 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
-      // .when('/logout', {
-      //   controller: 'LogoutCtrl'
-      // }) 
       .otherwise({
         redirectTo: '/'
       });

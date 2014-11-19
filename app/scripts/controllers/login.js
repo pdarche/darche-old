@@ -13,8 +13,9 @@ angular.module('login', ['http-auth-interceptor'])
 
     $scope.login = function() {      
       // REFACTOR: change this to a Service / Factory
-      var data = {name: $scope.username, password: $scope.password}
-      $http.post('http://127.0.0.1:5984/', data).
+      var data = {name: $scope.user.username, password: $scope.user.password}
+
+      $http.post('http://127.0.0.1:5984/_session', data).
         success(function(data) {
           authService.loginConfirmed();
           $rootScope.loggedIn = true;
