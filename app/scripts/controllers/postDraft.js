@@ -7,6 +7,7 @@
  * # DraftPostCtrl
  * Controller of the darcheApp
  */
+ 
 angular.module('darcheApp')
   .controller('DraftPostCtrl', function ($scope, $http, Post) {
     var posts = Post.query({publish:true}, function(){
@@ -17,7 +18,6 @@ angular.module('darcheApp')
       $scope.delete = function(post) {
         if (confirm("Are you sure you want to delete this project?")){
           Post.remove({id: post._id, rev: post._rev}, function(success){
-            console.log('successfully removed draft');
             _.remove($scope.posts, post);
           }, function(err){
             alert('Sorry, something went wrong!');

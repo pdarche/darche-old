@@ -4,7 +4,7 @@
     <p class="project-meta">
       <time datetime="{{project.timestamp}}">{{project.timestamp | date:'medium'}}</time>
       <a ng-if="$root.loggedIn" href="#projects/edit/{{project._id}}">Edit</a>
-      <p ng-if="$root.loggedIn" class="delete">Delete</p>
+      <a ng-if="$root.loggedIn" href="#" class="delete">Delete</a>
     </p>
   </header>
   <div class="project-description">

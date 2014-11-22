@@ -11,6 +11,9 @@
 angular.module('darcheApp')
   .factory('Post', function($resource) {
   return $resource('http://127.0.0.1:5984/darche/:id', {id: '@_id'}, {
+    save: {
+      withCredentials: true
+    },
     update: {
       method: 'PUT',
       withCredentials: true
