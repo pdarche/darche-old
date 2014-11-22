@@ -10,8 +10,8 @@
 angular.module('logout', ['http-auth-interceptor'])
   .controller('LogoutCtrl', function ($rootScope, $window, authService) {
     authService.loginCancelled();
-    // probably need to broadcast that the 
-    // user should be removed
     $rootScope.loggedIn = false;
+    $rootScope.username = undefined;
+	$rootScope.password = undefined;
     $window.location.href = '/#/';
   });
