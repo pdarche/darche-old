@@ -16,13 +16,9 @@ angular
       restrict: 'AEC',
       templateUrl: 'views/partials/project.html',
       link: function(scope, el, attrs){
-        var del = el.find('.delete');
-        // this should be removed.  Data binding should take care of this
-        del.on('click', function(ev){
+        el.on('click', '.delete', function(ev){
           ev.preventDefault();
-          scope.delete(scope.project, function(){
-            el.remove();
-          });
+          scope.delete(scope.project);
         });
       }
     }

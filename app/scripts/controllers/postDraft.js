@@ -17,7 +17,8 @@ angular.module('darcheApp')
       $scope.delete = function(post) {
         if (confirm("Are you sure you want to delete this project?")){
           Post.remove({id: post._id, rev: post._rev}, function(success){
-            _.remove($scope.posts, post)
+            console.log('successfully removed draft');
+            _.remove($scope.posts, post);
           }, function(err){
             alert('Sorry, something went wrong!');
           });

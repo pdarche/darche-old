@@ -27,6 +27,7 @@ angular.module('darcheApp')
     $scope.delete = function(post) {
       if (confirm("Are you sure you want to delete this post?")){
         post.remove({id: post._id, rev: post._rev}, function(success){
+          // add successful delete notification
         }, function(err){
           alert('Sorry, something went wrong!');
         });

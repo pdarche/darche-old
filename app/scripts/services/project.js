@@ -26,6 +26,10 @@ angular.module('darcheApp')
           return res;
         }
       }
+    },
+    remove: {
+      method: 'DELETE',
+      withCredentials: true
     }
   });
 });
