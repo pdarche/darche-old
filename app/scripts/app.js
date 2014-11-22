@@ -31,7 +31,7 @@ angular
           var protectedRoutes = /new|edit|drafts/g;
           $rootScope.loggedIn = $rootScope.loggedIn || $rootScope.username;
           if (!$rootScope.loggedIn && $location.path().search(protectedRoutes) !== -1) {
-            $location.path('/login');
+            $location.path('/');
           }
           return request;
         },
