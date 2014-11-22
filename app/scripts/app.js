@@ -19,7 +19,8 @@ angular
     'ngTouch',
     'pdDirectives',
     'pdFilters',
-    'login'
+    'login',
+    'logout'
   ])
   .value('md', new Showdown.converter())
   .config(function ($routeProvider, $httpProvider) {
@@ -98,6 +99,10 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/logout', {
+        templateUrl: 'views/logout.html',
+        controller: 'LogoutCtrl'
+      })      
       .otherwise({
         redirectTo: '/'
       });

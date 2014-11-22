@@ -17,11 +17,11 @@ angular.module('darcheApp')
       $scope.delete = function(project) {
         if (confirm("Are you sure you want to delete this project?")){
           Project.remove({id: project._id, rev: project._rev}, function(success){
-            _.remove($scope.projects, project)
+            _.remove($scope.projects, project);
           }, function(err){
-            console.log("Sorry, couldn't delete the post!")
-          })
+            alert("Sorry, couldn't delete the post!");
+          });
         }
-      }                     
+      }               
     });
   });

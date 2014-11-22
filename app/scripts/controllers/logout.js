@@ -8,9 +8,10 @@
  * Controller of the darcheApp
  */
 angular.module('logout', ['http-auth-interceptor'])
-  .controller('LogoutCtrl', function ($rootScope, authService) {
-    // authService.loginCancelled();
+  .controller('LogoutCtrl', function ($rootScope, $window, authService) {
+    authService.loginCancelled();
     // probably need to broadcast that the 
     // user should be removed
-    // $rootScope.loggedIn = false;
+    $rootScope.loggedIn = false;
+    $window.location.href = '/#/';
   });
