@@ -60,6 +60,16 @@ body {
   }
 }
 
+.inline-nav {
+  list-style-type: none;
+  padding: 0px;
+
+  li {
+    display: inline-block;
+    margin-right: 10px; 
+  }
+}
+
 /* Left Navigation */
 div[pd-left-nav] {
   height: 100%;

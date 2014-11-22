@@ -1,6 +1,9 @@
 <div id="container">
 	<header>
-		<a ng-if="$root.loggedIn" href="/#/projects/new/project">New Project</a>
+		<ul class="inline-nav">
+			<li ng-if="$root.loggedIn"><a href="/#/blog/new/project">New Project</a></li>
+			<li ng-if="$root.loggedIn" class="nav-li"><a href="/#/drafts/projects">Project Drafts</a></li>
+		</ul>
 		<h1 class="page-title">Projects</h1>
 	</header>
 	<div class="projects" ng-repeat="project in projects | orderBy:'timestamp':true">
