@@ -27,7 +27,7 @@ angular
     $httpProvider.interceptors.push(function($rootScope, $location, $q) {
       return {
         'request': function(request) {
-          // if we're not logged-in to the AngularJS app, redirect to login page
+          // if we're not logged-in to the AngularJS app, redirect to login page 
           var protectedRoutes = /new|edit|drafts/g;
           $rootScope.loggedIn = $rootScope.loggedIn || $rootScope.username;
           if (!$rootScope.loggedIn && $location.path().search(protectedRoutes) !== -1) {
