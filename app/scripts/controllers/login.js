@@ -18,7 +18,7 @@ angular.module('login', ['http-auth-interceptor', 'ngCookies'])
         password: $scope.user.password
       };
 
-      $http.post('http://127.0.0.1:5984/_session', reqData, {withCredentials: true}).
+      $http.post('http://peterdarche.com:5984/_session', reqData, {withCredentials: true}).
         success(function(data, status, headers, config) {
           authService.loginConfirmed();
           $rootScope.loggedIn = true;
