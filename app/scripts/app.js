@@ -20,10 +20,13 @@ angular
     'pdDirectives',
     'pdFilters',
     'login',
-    'logout'
+    'logout',
+    'hc.marked'
   ])
-  .value('md', new Showdown.converter())
-  .config(function ($routeProvider, $httpProvider) {
+  .config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({gfm: true, tables: true});
+    }])
+  .config(function ($routeProvider, $httpProvider) {  
     $httpProvider.interceptors.push(function($rootScope, $location, $q) {
       return {
         'request': function(request) {
@@ -106,9 +109,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .filter('markdown', ['md', function(md) {
-    return function(input){
-      if(input) return md.makeHtml(input);
-    };
-  }]);
+  });

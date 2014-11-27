@@ -7,6 +7,7 @@
  * # ProjectsCtrl
  * Controller of the darcheApp
  */
+ 
 angular.module('darcheApp')
   .controller('ProjectsCtrl', function ($scope, $http, Project) {
     var projects = Project.query({publish:true}, function(){
