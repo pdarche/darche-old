@@ -12,9 +12,10 @@
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
-    "pure": "~0.5.0",
-    "showdown": "~0.3.1",
     "angular-http-auth": "~1.2.2",
+    "angular-marked": "0.0.12",
+    "pure": "~0.5.0",
+    "marked": "0.3.2",
     "lodash": "2.4.1"
   },
   "devDependencies": {

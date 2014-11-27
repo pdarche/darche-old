@@ -6,7 +6,7 @@
         <time datetime="{{project.timestamp}}">{{project.timestamp | date:'medium'}}</time>
       </p>
     </header>
-    <div class="project-body" ng-bind-html="project.body | markdown"></div>
+    <div class="project-body" marked="project.body"></div>
     <div class="comments"></div>
   </article>
 </div>
