@@ -9,7 +9,7 @@
  */
 
 angular.module('darcheApp')
-  .controller('DraftProjectCtrl', function ($scope, $http, Project) {
+  .controller('DraftProjectCtrl', ['$scope', '$http', 'Project', function ($scope, $http, Project) {
     var projects = Project.query({publish:true}, function(){
       // I want this to be intercepted!
       $scope.projects = projects.rows.map(function(row){ return row.doc; })
@@ -25,4 +25,4 @@ angular.module('darcheApp')
         }
       }
     });
-  });
+  }]);

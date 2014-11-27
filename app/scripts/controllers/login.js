@@ -8,7 +8,7 @@
  * Controller of the darcheApp
  */
 angular.module('login', ['http-auth-interceptor', 'ngCookies'])
-  .controller('LoginCtrl', function ($scope, $rootScope, $http, $location, $cookies, $timeout, authService) {
+  .controller('LoginCtrl', ['$scope', '$rootScope', '$http', '$location', '$cookies', '$timeout', 'authService', function ($scope, $rootScope, $http, $location, $cookies, $timeout, authService) {
     $scope.user = {username: '', password: ''};
 
     $scope.login = function() {      
@@ -31,4 +31,4 @@ angular.module('login', ['http-auth-interceptor', 'ngCookies'])
           alert("Sorry, incorrect password");
         });
     }
-  });
+  }]);

@@ -8,10 +8,10 @@
  * Controller of the darcheApp
  */
 angular.module('logout', ['http-auth-interceptor'])
-  .controller('LogoutCtrl', function ($rootScope, $window, authService) {
+  .controller('LogoutCtrl', ['$rootScope', '$window', 'authService', function ($rootScope, $window, authService) {
     authService.loginCancelled();
     $rootScope.loggedIn = false;
     $rootScope.username = undefined;
 	$rootScope.password = undefined;
     $window.location.href = '/#/';
-  });
+  }]);

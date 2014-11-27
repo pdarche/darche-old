@@ -5,10 +5,11 @@
  * @name darcheApp.controller:EditProjectCtrl
  * @description
  * # EditProjectCtrl
- * Controller 
+ * Controller
  */
+ 
 angular.module('darcheApp')
-  .controller('EditProjectCtrl', function ($scope, $routeParams, $http, Project) {
+  .controller('EditProjectCtrl', ['$scope', '$routeParams', '$http', 'Project', function ($scope, $routeParams, $http, Project) {
     $scope.project = Project.get({id: $routeParams.id});
     
     $scope.submit = function() {
@@ -33,4 +34,4 @@ angular.module('darcheApp')
         });
       }
     }    
-  });
+  }]);

@@ -9,6 +9,6 @@
  */
 
 angular.module('darcheApp')
-  .controller('PostCtrl', function ($scope, $routeParams, $http, Post) {
+  .controller('PostCtrl', ['$scope', '$routeParams', '$http', 'Post', function ($scope, $routeParams, $http, Post) {
     $scope.post = Post.get({id: $routeParams.id});
-  });
+  }]);

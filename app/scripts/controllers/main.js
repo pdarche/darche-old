@@ -8,6 +8,6 @@
  * Controller of the darcheApp
  */
 angular.module('darcheApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', ['$scope', function ($scope) {
   	
-  });
+  }]);

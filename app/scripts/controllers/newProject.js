@@ -8,7 +8,7 @@
  * Controller 
  */
 angular.module('darcheApp')
-  .controller('NewProjectCtrl', function ($scope, $routeParams, $http, Project) {
+  .controller('NewProjectCtrl', ['$scope', '$routeParams', '$http', 'Project', function ($scope, $routeParams, $http, Project) {
     var projectConfig = {
       title: null,
       description: null,
@@ -26,4 +26,4 @@ angular.module('darcheApp')
         alert('Error!');
       });
     }
-  });
+  }]);
