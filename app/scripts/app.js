@@ -18,7 +18,6 @@ angular
     'ngSanitize',
     'ngTouch',
     'pdDirectives',
-    'pdFilters',
     'login',
     'logout',
     'hc.marked'
