@@ -9,6 +9,6 @@
  */
 
 angular.module('darcheApp')
-  .controller('ProjectCtrl', function ($scope, $routeParams, $http, Project) {
+  .controller('ProjectCtrl', ['$scope', '$routeParams', '$http', 'Project', function ($scope, $routeParams, $http, Project) {
     $scope.project = Project.get({id: $routeParams.id});
-  });
+  }]);

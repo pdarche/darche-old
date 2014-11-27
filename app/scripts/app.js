@@ -18,7 +18,6 @@ angular
     'ngSanitize',
     'ngTouch',
     'pdDirectives',
-    'pdFilters',
     'login',
     'logout',
     'hc.marked'
@@ -26,7 +25,7 @@ angular
   .config(['markedProvider', function(markedProvider) {
       markedProvider.setOptions({gfm: true, tables: true});
     }])
-  .config(function ($routeProvider, $httpProvider) {  
+  .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {  
     $httpProvider.interceptors.push(function($rootScope, $location, $q) {
       return {
         'request': function(request) {
@@ -109,4 +108,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);

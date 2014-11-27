@@ -8,7 +8,7 @@
  * Controller 
  */
 angular.module('darcheApp')
-  .controller('EditPostCtrl', function ($scope, $routeParams, $http, Post) {
+  .controller('EditPostCtrl', ['$scope', '$routeParams', '$http', 'Post', function ($scope, $routeParams, $http, Post) {
     $scope.post = Post.get({id: $routeParams.id});
     
     $scope.submit = function() {
@@ -32,5 +32,5 @@ angular.module('darcheApp')
           alert('Sorry, something went wrong!');
         });
       }
-    }      
-  });
+    }
+  }]);

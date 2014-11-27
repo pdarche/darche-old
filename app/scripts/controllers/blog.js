@@ -8,7 +8,7 @@
  * Controller of the darcheApp
  */
 angular.module('darcheApp')
-  .controller('BlogCtrl', function ($scope, $http, Post) {
+  .controller('BlogCtrl', ['$scope', '$http', 'Post', function ($scope, $http, Post) {
     var posts = Post.query({publish:true}, function(){
       // I want this to be intercepted!
       $scope.posts = posts.rows.map(function(row){ return row.doc; })
@@ -24,4 +24,4 @@ angular.module('darcheApp')
         }
       }
     });
-  });
+  }]);

@@ -8,7 +8,7 @@
  * Controller 
  */
 angular.module('darcheApp')
-  .controller('NewPostCtrl', function ($scope, $routeParams, $http, Post) {
+  .controller('NewPostCtrl', ['$scope', '$routeParams', '$http', 'Post', function ($scope, $routeParams, $http, Post) {
     var postConfig = {
       title: null,
       description: null,
@@ -26,4 +26,4 @@ angular.module('darcheApp')
         alert('Error!');
       });
     }
-  });
+  }]);

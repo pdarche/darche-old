@@ -9,31 +9,31 @@
  */
 
 angular.module('darcheApp')
-  .factory('Post', function($resource) {
-  return $resource('http://127.0.0.1:5984/darche/:id', {id: '@_id'}, {
-    save: {
-      method: 'POST',
-      withCredentials: true
-    },
-    update: {
-      method: 'PUT',
-      withCredentials: true
-    },
-    query: {
-      method: 'GET',
-      params: {include_docs: true},
-      url: 'http://127.0.0.1:5984/darche/_all_docs',
-      headers: {'Content-Type':'text/plain'},
-      interceptor: {
-        response: function(res){
-          res.data = res.data.rows.filter(function(row){ return row.doc; });
-          return res;
+  .factory('Post', ['$resource', function ($resource) {
+    return $resource('http://127.0.0.1:5984/darche/:id', {id: '@_id'}, {
+      save: {
+        method: 'POST',
+        withCredentials: true
+      },
+      update: {
+        method: 'PUT',
+        withCredentials: true
+      },
+      query: {
+        method: 'GET',
+        params: {include_docs: true},
+        url: 'http://127.0.0.1:5984/darche/_all_docs',
+        headers: {'Content-Type':'text/plain'},
+        interceptor: {
+          response: function(res){
+            res.data = res.data.rows.filter(function(row){ return row.doc; });
+            return res;
+          }
         }
-      }
-    },
-    remove: {
-      method: 'DELETE',
-      withCredentials: true
-    }    
-  });
-});
+      },
+      remove: {
+        method: 'DELETE',
+        withCredentials: true
+      }    
+    });
+  }]);
