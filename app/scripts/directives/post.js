@@ -2,11 +2,10 @@
 
 /**
  * @ngdoc post directive
- * @name 
+ * @name
  * @description
  * # darcheApp
  *
- * 
  */
 
 angular

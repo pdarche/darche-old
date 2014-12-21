@@ -24,6 +24,7 @@ angular.module('darcheApp')
         params: {include_docs: true},
         url: 'http://peterdarche.com:5984/posts/_all_docs',
         headers: {'Content-Type':'text/plain'},
+        withCredentials: true,
         interceptor: {
           response: function(res){
             res.data = res.data.rows.filter(function(row){ return row.doc; });
@@ -34,6 +35,6 @@ angular.module('darcheApp')
       remove: {
         method: 'DELETE',
         withCredentials: true
-      }    
+      }
     });
   }]);

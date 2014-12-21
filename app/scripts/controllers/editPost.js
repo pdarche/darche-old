@@ -5,12 +5,12 @@
  * @name darcheApp.controller:EditCtrl
  * @description
  * # EditPostCtrl
- * Controller 
+ * Controller
  */
 angular.module('darcheApp')
   .controller('EditPostCtrl', ['$scope', '$routeParams', '$http', 'Post', function ($scope, $routeParams, $http, Post) {
     $scope.post = Post.get({id: $routeParams.id});
-    
+
     $scope.submit = function() {
       var updateTime = new Date().getTime();
       // push update time to updates array
@@ -18,9 +18,10 @@ angular.module('darcheApp')
       // add any comments to the comments array
       // $scope.post.comments = scope.post.comments.split(', ')
       Post.update({id: $scope.post._id}, $scope.post, function(data){
-        alert("Saved successfully");
+        alert('Saved succesfully');
+        $scope.post._rev = data.rev;
       }, function(err){
-        alert("Error!");        
+        alert("Error!");
       });
     }
 

@@ -10,6 +10,7 @@
 angular.module('logout', ['http-auth-interceptor'])
   .controller('LogoutCtrl', ['$rootScope', '$window', 'authService', function ($rootScope, $window, authService) {
     authService.loginCancelled();
+    delete $window.sessionStorage.token;
     $rootScope.loggedIn = false;
     $rootScope.username = undefined;
 	$rootScope.password = undefined;
