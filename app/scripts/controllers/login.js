@@ -11,7 +11,7 @@ angular.module('login', ['http-auth-interceptor', 'ngCookies'])
   .controller('LoginCtrl', ['$scope', '$rootScope', '$http', '$location', '$cookies', '$timeout', 'authService', function ($scope, $rootScope, $http, $location, $cookies, $timeout, authService) {
     $scope.user = {username: '', password: ''};
 
-    $scope.login = function() {      
+    $scope.login = function() {
       // REFACTOR: change this to a Service / Factory
       var reqData = {
         name: $scope.user.username,

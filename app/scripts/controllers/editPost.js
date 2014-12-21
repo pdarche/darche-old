@@ -18,7 +18,8 @@ angular.module('darcheApp')
       // add any comments to the comments array
       // $scope.post.comments = scope.post.comments.split(', ')
       Post.update({id: $scope.post._id}, $scope.post, function(data){
-        console.log("Saved successfully", data);
+        alert('Saved succesfully');
+        $scope.post._rev = data.rev;
       }, function(err){
         alert("Error!");
       });

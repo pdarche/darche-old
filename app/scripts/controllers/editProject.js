@@ -7,11 +7,11 @@
  * # EditProjectCtrl
  * Controller
  */
- 
+
 angular.module('darcheApp')
   .controller('EditProjectCtrl', ['$scope', '$routeParams', '$http', 'Project', function ($scope, $routeParams, $http, Project) {
     $scope.project = Project.get({id: $routeParams.id});
-    
+
     $scope.submit = function() {
       var updateTime = new Date().getTime();
       // push update time to updates array
@@ -20,6 +20,7 @@ angular.module('darcheApp')
       // $scope.project.comments = scope.project.comments.split(', ')
       Project.update({id: $scope.project._id}, $scope.project, function(data){
         alert("Saved successfully");
+        $scope.project._rev = data.rev;
       }, function(err){
         alert("Error!");
       });
@@ -33,5 +34,5 @@ angular.module('darcheApp')
           alert('Sorry, something went wrong!');
         });
       }
-    }    
+    }
   }]);

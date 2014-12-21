@@ -25,7 +25,7 @@ angular
   .config(['markedProvider', function(markedProvider) {
       markedProvider.setOptions({gfm: true, tables: true});
     }])
-  .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {  
+  .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
     $httpProvider.interceptors.push(function($rootScope, $location, $q) {
       return {
         'request': function(request) {
@@ -43,7 +43,7 @@ angular
             $rootScope.loggedIn = false;
             $location.path('/login');
           }
-          return $q.reject(rejection); 
+          return $q.reject(rejection);
         }
       };
     });
@@ -88,7 +88,7 @@ angular
       .when('/projects/edit/:id',{
         templateUrl: 'views/editProject.html',
         controller: 'EditProjectCtrl'
-      })      
+      })
       .when('/projects/new/project',{
         templateUrl: 'views/editProject.html',
         controller: 'NewProjectCtrl'
@@ -104,7 +104,7 @@ angular
       .when('/logout', {
         templateUrl: 'views/logout.html',
         controller: 'LogoutCtrl'
-      })      
+      })
       .otherwise({
         redirectTo: '/'
       });
