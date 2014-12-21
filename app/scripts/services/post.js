@@ -34,6 +34,6 @@ angular.module('darcheApp')
       remove: {
         method: 'DELETE',
         withCredentials: true
-      }    
+      }
     });
   }]);
