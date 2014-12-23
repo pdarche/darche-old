@@ -1,4 +1,5 @@
 <div id="container">
+  <a ng-if="$root.loggedIn" href="/#/projects/edit/{{project._id}}">edit</a>
   <article class="project">
     <header>
       <h1 class="project-title page-title">{{project.title}}</h1>
