@@ -2,7 +2,7 @@
   <header>
     <h2 class="post-title"><a href="#blog/{{post._id}}">{{post.title}}</a></h2>
     <p class="post-meta">
-    	<time datetime="{{post.timestamp}}">{{post.timestamp | date:'medium'}}</time>
+    	<time datetime="{{post.timestamp}}">{{post.timestamp | date:'longDate'}}</time>
     	<a ng-if="$root.loggedIn" href="#blog/edit/{{post._id}}">Edit</a>
       <a ng-if="$root.loggedIn" href="#" class="delete">Delete</a>
     </p>

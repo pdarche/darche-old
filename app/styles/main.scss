@@ -12,17 +12,25 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 /* Space out content a bit */
 body {
-  position: absolute; 
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .container {
   width: 100%;
   height: 100%;
   /*background-image: url('/images/brushed/brushed.png');*/
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2.post-title {
+  font-weight: 300;
 }
 
 #login_form {
@@ -48,14 +56,14 @@ body {
 }
 
 @keyframes logo {
-  0% { 
+  0% {
     /* @include transform(scale(.1));*/
     opacity: 1;
   }
-  50% { 
-    opacity: 1; 
+  50% {
+    opacity: 1;
   }
-  100% { 
+  100% {
     /*@include transform(scale(1)); */
   }
 }
@@ -66,7 +74,7 @@ body {
 
   li {
     display: inline-block;
-    margin-right: 10px; 
+    margin-right: 10px;
   }
 }
 
@@ -82,12 +90,12 @@ div[pd-left-nav] {
     display: block;
     margin: 20px auto 10px auto;
     width: 60px;
-    
+
     &:hover {
       /*box-shadow: 0px 0px 10px gray;*/
       outline: 1px solid #ccc;
       border-radius: 5px;
-    }    
+    }
   }
 
   #nav_menu {
@@ -98,7 +106,7 @@ div[pd-left-nav] {
     ul {
       padding: 0px;
       list-style-type: none;
-      
+
       li {
         width: 100%;
         text-align: center;
@@ -114,18 +122,18 @@ div[pd-left-nav] {
 /* this should be a mixin! */
 .big-serif {
   font-family: Georgia, "Cambria", serif;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 .post-input, .project-input {
-  width: 100%; 
+  width: 100%;
   border-radius: 5px;
-  margin: 0px 0px 20px 0px;  
+  margin: 0px 0px 20px 0px;
 }
 
 #editor {
   height: 300px;
-  width: 100%; 
+  width: 100%;
   border-radius: 5px;
 }
 

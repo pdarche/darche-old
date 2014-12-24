@@ -5,7 +5,7 @@
  * @name darcheApp.controller:EditCtrl
  * @description
  * # EditCtrl
- * Controller 
+ * Controller
  */
 angular.module('darcheApp')
   .controller('NewPostCtrl', ['$scope', '$routeParams', '$http', 'Post', function ($scope, $routeParams, $http, Post) {
@@ -14,8 +14,8 @@ angular.module('darcheApp')
       description: null,
       body: null,
       tags: [],
-      updates: [],      
-      publish: false 
+      updates: [],
+      publish: false
     };
     $scope.post = new Post(postConfig);
     $scope.submit = function() {

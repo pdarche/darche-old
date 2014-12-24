@@ -4,7 +4,7 @@
     <header>
       <h1 class="post-title page-title">{{post.title}}</h1>
       <p class="post-meta">
-        <time datetime="{{post.timestamp}}">{{post.timestamp | date:'medium'}}</time>
+        <time datetime="{{post.timestamp}}">{{post.timestamp | date:'longDate'}}</time>
       </p>
     </header>
     <div class="post-body" marked="post.body"></div>

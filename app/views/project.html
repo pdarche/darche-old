@@ -4,7 +4,7 @@
     <header>
       <h1 class="project-title page-title">{{project.title}}</h1>
       <p class="project-meta">
-        <time datetime="{{project.timestamp}}">{{project.timestamp | date:'medium'}}</time>
+        <time datetime="{{project.timestamp}}">{{project.timestamp | date:'longDate'}}</time>
       </p>
     </header>
     <div class="project-body" marked="project.body"></div>
