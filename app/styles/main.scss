@@ -138,14 +138,14 @@ div[pd-left-nav] {
 }
 
 #container {
-  width:66%;
+  width:60%;
   margin: 0px auto;
   padding: 20px;
 }
 
 .page-title {
-  font-size: 65px;
-  margin-bottom: 20px;
+  font-size: 45px;
+  margin-bottom: 10px;
 }
 
 .inline-block {
@@ -177,11 +177,11 @@ div[pd-left-nav] {
   }
 
   .post-body, .project-body {
-    border-top: 1px solid #eee;
+    /* border-top: 1px solid #eee; */
     font-family: Georgia, "Cambria", serif;
     font-size: 20px;
     margin: 20px auto;
-    padding-top: 20px;
+    padding-top: 10px;
     /*width: 80%;*/
   }
 }
