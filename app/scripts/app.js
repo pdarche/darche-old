@@ -25,7 +25,7 @@ angular
   .config(['markedProvider', function(markedProvider) {
       markedProvider.setOptions({gfm: true, tables: true});
     }])
-  .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
+  .config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
     $httpProvider.interceptors.push('AuthInterceptor')
 
     $routeProvider
@@ -88,4 +88,6 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
+      $locationProvider.html5Mode(true);
   }]);
