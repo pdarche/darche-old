@@ -49,6 +49,10 @@ angular
         templateUrl: 'views/editPost.html',
         controller: 'EditPostCtrl'
       })
+      .when('/blog/preview/post', {
+        templateUrl: 'views/post.html',
+        controller: 'PostPreviewCtrl'
+      })
       .when('/blog/new/post',{
         templateUrl: 'views/editPost.html',
         controller: 'NewPostCtrl'
@@ -89,5 +93,5 @@ angular
         redirectTo: '/'
       });
 
-      $locationProvider.html5Mode(true);
+      // $locationProvider.html5Mode(true);
   }]);

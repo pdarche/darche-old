@@ -132,7 +132,7 @@ div[pd-left-nav] {
 }
 
 #editor {
-  height: 300px;
+  height: 500px;
   width: 100%;
   border-radius: 5px;
 }
@@ -150,6 +150,16 @@ div[pd-left-nav] {
 
 .inline-block {
   display: inline-block;
+}
+
+.flag {
+  background-color: #eee;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 13%;
+  width: 100px;
+  height: 40px;
 }
 
 /* Blog Posts */

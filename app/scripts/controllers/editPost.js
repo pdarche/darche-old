@@ -7,9 +7,15 @@
  * # EditPostCtrl
  * Controller
  */
+
 angular.module('darcheApp')
-  .controller('EditPostCtrl', ['$scope', '$routeParams', '$http', 'Post', function ($scope, $routeParams, $http, Post) {
-    $scope.post = Post.get({id: $routeParams.id});
+  .controller('EditPostCtrl', ['$scope', '$routeParams', '$http', 'Post', 'Scopes', function ($scope, $routeParams, $http, Post, Scopes) {
+    $scope.post = Scopes.get('currentPost')
+
+    if (!$scope.post){
+      $scope.post = Post.get({id: $routeParams.id});
+      Scopes.store('currentPost', $scope.post);
+    }
 
     $scope.submit = function() {
       var updateTime = new Date().getTime();
