@@ -49,10 +49,6 @@ angular
         templateUrl: 'views/editPost.html',
         controller: 'EditPostCtrl'
       })
-      .when('/blog/preview/post', {
-        templateUrl: 'views/post.html',
-        controller: 'PostPreviewCtrl'
-      })
       .when('/blog/new/post',{
         templateUrl: 'views/editPost.html',
         controller: 'NewPostCtrl'
