@@ -25,15 +25,4 @@ angular.module('darcheApp')
       $scope.post._rev = data.rev;
       $window.location.href = '/#/blog/edit/' + data.id;
     });
-
-    // $scope.post = new Post(postConfig);
-
-    // $scope.submit = function() {
-    //   $scope.post.timestamp = new Date().getTime();
-    //   Post.save($scope.post, function(data){
-    //     alert('Saved successfully');
-    //   }, function(err){
-    //     alert('Error!');
-    //   });
-    // }
   }]);

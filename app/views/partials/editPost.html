@@ -1,7 +1,7 @@
 <div>
     <a href="/#/blog/{{post._id}}" id="preview" class="flag">Preview</a>
     <label>Title</label>
-    <textarea class="post-input" ng-model="post.title">{{post.title}}</textarea>
+    <textarea class="post-input title-input" rows="1" ng-model="post.title">{{post.title}}</textarea>
     <label>Description</label>
     <textarea id="description" class="post-input" ng-model="post.description">{{post.description}}</textarea>
     <!-- tags should be a transcluded directive -->

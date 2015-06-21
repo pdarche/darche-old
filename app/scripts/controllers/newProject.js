@@ -25,13 +25,4 @@ angular.module('darcheApp')
       $scope.project._rev = data.rev;
       $window.location.href = '/#/projects/edit/' + data.id;
     });
-
-    // $scope.submit = function() {
-    //   $scope.project.timestamp = new Date().getTime();
-    //   Project.save($scope.project, function(data){
-    //     alert('Saved successfully');
-    //   }, function(err){
-    //     alert('Error!');
-    //   });
-    // }
   }]);
