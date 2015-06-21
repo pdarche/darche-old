@@ -1,20 +1,3 @@
 <div id="container">
-	<label>Title</label>
-	<textarea class="post-input" ng-model="post.title">{{post.title}}</textarea>
-	<label>Description</label>
-	<textarea id="description" class="post-input" ng-model="post.description">{{post.description}}</textarea>
-	<!-- tags should be a transcluded directive -->
-	<label>Tags</label>
-	<textarea id="tags" class="post-input" ng-model="post.tags">{{post.tags}}</textarea>
-	<label>Body</label>
-	<textarea id="editor" class="post-input" ng-model="post.body">{{post.body}}</textarea>
-	<label>Publish?</label>
-	<input type="checkbox" ng-model="post.publish"/>
-	<form ng-submit="submit()">
-		<div class="form-group">
-			<button class="submit" type="submit">Submit</button>
-		</div>
-	</form>
-	<h1>{{post.title}}</h1>
-	<div marked="post.body"></div>
+	<pd-edit-post></pd-edit-post>
 </div>

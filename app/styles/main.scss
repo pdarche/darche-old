@@ -127,14 +127,17 @@ div[pd-left-nav] {
 
 .post-input, .project-input {
   width: 100%;
-  border-radius: 5px;
+  border: 1px solid #eee;
   margin: 0px 0px 20px 0px;
 }
 
+.title-input {
+  font-size: 30px;
+}
+
 #editor {
-  height: 300px;
+  height: 500px;
   width: 100%;
-  border-radius: 5px;
 }
 
 #container {
@@ -150,6 +153,16 @@ div[pd-left-nav] {
 
 .inline-block {
   display: inline-block;
+}
+
+.flag {
+  background-color: #eee;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 13%;
+  width: 100px;
+  height: 40px;
 }
 
 /* Blog Posts */

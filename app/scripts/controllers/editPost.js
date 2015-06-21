@@ -7,8 +7,9 @@
  * # EditPostCtrl
  * Controller
  */
+
 angular.module('darcheApp')
-  .controller('EditPostCtrl', ['$scope', '$routeParams', '$http', 'Post', function ($scope, $routeParams, $http, Post) {
+  .controller('EditPostCtrl', ['$scope', '$routeParams', '$http', 'Post', 'Scopes', function ($scope, $routeParams, $http, Post, Scopes) {
     $scope.post = Post.get({id: $routeParams.id});
 
     $scope.submit = function() {

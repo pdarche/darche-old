@@ -1,0 +1,19 @@
+<div>
+    <a href="/#/projects/{{project._id}}" id="preview" class="flag">Preview</a>
+    <label>Title</label>
+    <textarea class="project-input title-input" rows="1" ng-model="project.title">{{project.title}}</textarea>
+    <label>Description</label>
+    <textarea id="description" class="project-input" ng-model="project.description">{{project.description}}</textarea>
+    <!-- tags should be a transcluded directive -->
+    <label>Tags</label>
+    <textarea id="tags" class="project-input" ng-model="project.tags">{{project.tags}}</textarea>
+    <label>Body</label>
+    <textarea id="editor" class="project-input" ng-model="project.body">{{project.body}}</textarea>
+    <label>Publish?</label>
+    <input type="checkbox" ng-model="project.publish"/>
+    <form ng-submit="submit()">
+        <div class="form-group">
+            <button class="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
