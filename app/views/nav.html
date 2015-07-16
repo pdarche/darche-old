@@ -1,12 +1,14 @@
 <div id="nav_icon">
-	<img src="images/threelines.png"/>
+    <img src="images/threelines.png"/>
 </div>
-<div id="nav_menu" class="hidden">
-	<ul class="nav-ul">
-		<li class="nav-li"><a href="/">Home</a></li>
-		<li class="nav-li"><a href="/#/blog">Blog</a></li>
-		<li class="nav-li"><a href="/#/projects">Projects</a></li>
-		<li class="nav-li"><a href="/#/login">Login</a></li>
-		<li ng-if="$root.loggedIn" class="nav-li" id="logout"><a href="/#/logout">Logout</a></li>
-	</ul>
+<div id="nav_bar" class="not-shown">
+    <div id="nav_menu">
+    	<ul class="nav-ul inline-nav">
+    		<li class="nav-li"><a href="/">Home</a></li>
+    		<li class="nav-li"><a href="/#/blog">Blog</a></li>
+    		<li class="nav-li"><a href="/#/projects">Projects</a></li>
+    		<li class="nav-li"><a href="/#/login">Login</a></li>
+    		<li ng-if="$root.loggedIn" class="nav-li" id="logout"><a href="/#/logout">Logout</a></li>
+    	</ul>
+    </div>
 </div>
