@@ -11,7 +11,7 @@
 
 angular
   .module('pdDirectives', [])
-  .directive('pdLeftNav', function(){
+  .directive('pdNav', function(){
     return {
       templateUrl: 'views/nav.html',
       link: function(scope, el, attrs){
