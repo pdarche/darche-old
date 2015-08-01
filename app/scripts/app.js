@@ -26,7 +26,8 @@ angular
       markedProvider.setOptions({gfm: true, tables: true});
     }])
   .config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
-    $httpProvider.interceptors.push('AuthInterceptor')
+    $httpProvider.interceptors.push('AuthInterceptor');
+    $httpProvider.interceptors.push('HomeInterceptor');
 
     $routeProvider
       .when('/', {

@@ -20,6 +20,7 @@ angular.module('darcheApp')
       if (!$window.sessionStorage.token && $location.path().search(protectedRoutes) !== -1) {
         $location.path('/');
       }
+
       return request;
     },
     responseError: function(rejection) {

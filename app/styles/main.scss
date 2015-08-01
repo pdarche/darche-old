@@ -138,9 +138,8 @@ h2.project-title, h2.post-title {
 }
 
 
-/* Navigation */
 #nav_icon {
-    width: 50px;
+    width: 45px;
     position: fixed;
     left: 20px;
     top: 5px;
@@ -149,7 +148,7 @@ h2.project-title, h2.post-title {
     img {
     box-sizing:border-box;
     display: block;
-    margin: 5px auto;
+    margin: 2px auto;
     width: 50px;
 
     &:hover {
@@ -165,12 +164,12 @@ h2.project-title, h2.post-title {
   top: 0px;
 
   width: 100%;
-  height: 50px;
+  height: 45px;
   padding: 5px 0px;
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
 
   border-bottom: 1px solid #ccc;
   transition: all .1s linear;
@@ -233,6 +232,11 @@ h2.project-title, h2.post-title {
   width:50%;
   margin: 0px auto;
   padding: 50px 10px 10px 10px;
+}
+
+#container > header {
+  position: fixed;
+  left: 13%;
 }
 
 .page-title {
@@ -319,6 +323,14 @@ h2.project-title, h2.post-title {
 
 .container-narrow > hr {
   margin: 30px 0;
+}
+
+@media screen and (max-width: 600px) {
+
+  #container {
+   width: 100%;
+   padding: 50px 20px 10px 20px;
+  }
 }
 
 /* Responsive: Portrait tablets and up */
