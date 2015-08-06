@@ -2,25 +2,39 @@
 
 /**
  * @ngdoc left-nav
- * @name 
+ * @name
  * @description
  * # darcheApp
  *
- * 
+ *
  */
 
 angular
   .module('pdDirectives', [])
-  .directive('pdLeftNav', function(){
-    return {  
+  .directive('pdNav', function(){
+    return {
       templateUrl: 'views/nav.html',
       link: function(scope, el, attrs){
-        el.on('click', 'img', function(){
-          var menu = $('#nav_menu');
-          
-          menu.hasClass('hidden') ? 
-            menu.removeClass('hidden') : 
-            menu.addClass('hidden');
+        el.on('click', '#nav_icon', function(ev){
+          var menu = $('#nav_bar');
+
+          menu.hasClass('not-shown') ?
+            menu.removeClass('not-shown') :
+            menu.addClass('not-shown');
+        });
+
+        scope.$on('home', function(ev){
+          var menu = $('#nav_bar');
+
+          menu.hasClass('not-shown') ?
+            null : menu.addClass('not-shown');
+        });
+
+        scope.$on('not-home', function(ev){
+          var menu = $('#nav_bar');
+
+          menu.hasClass('not-shown') ?
+            menu.removeClass('not-shown') : null;
         });
       }
     }

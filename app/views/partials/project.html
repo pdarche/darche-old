@@ -1,13 +1,13 @@
 <article class="project">
-  <header>
-    <h2 class="project-title"><a href="#/projects/{{project._id}}">{{project.title}}</a></h2>
-    <p class="project-meta">
-      <time datetime="{{project.timestamp}}">{{project.timestamp | date:'longDate'}}</time>
-      <a ng-if="$root.loggedIn" href="#projects/edit/{{project._id}}">Edit</a>
-      <a ng-if="$root.loggedIn" href="#" class="delete">Delete</a>
-    </p>
-  </header>
-  <div class="project-description">
-    {{project.description}}
-  </div>
+    <header>
+        <h4 class="project-partial-title"><a href="#/projects/{{project._id}}">{{project.title}}</a></h4>
+        <span class="project-meta">
+            <a ng-if="$root.loggedIn" href="#projects/edit/{{project._id}}" class="info">Edit</a>
+            <a ng-if="$root.loggedIn" href="#" class="delete info">Delete</a>
+            <time datetime="{{project.timestamp}}" class="info">{{project.timestamp | date:'MMM yyyy'}}</time>
+        </span>
+    </header>
+    <a href="#/projects/{{project._id}}">
+        <div class="project-partial-image" style="background-image:url({{project.imageUrl}})"></div>
+    </a>
 </article>
