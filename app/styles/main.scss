@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
+//variables
+$blackish: #333;
+$pad: 20px;
+
 //base
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -10,20 +14,56 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
   box-sizing: border-box;
 }
 
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 //layout
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 .nav {
   position: fixed;
   width: 100%;
 }
 
-$pad: 20px;
+#home_canvas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
+/*
 [class*='col-'] {
   padding-right: $pad;
   .grid &:last-of-type {
     padding-right: 0;
   }
 }
+*/
 
 .col-2-3 {
   width: 66.66%;
@@ -51,45 +91,8 @@ $pad: 20px;
   font-weight: 600;
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 .neg-seventy {
   top: -70px;
-}
-
-/* Space out content a bit */
-body {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-
-#app {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-
-#home_canvas {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 #greeting_container {
@@ -112,7 +115,11 @@ body {
 }
 
 h2.project-title, h2.post-title {
-  font-weight: 300;
+  font-weight: 500;
+
+  a {
+    color: $blackish;
+  }
 }
 
 #login_form {
@@ -137,15 +144,14 @@ h2.project-title, h2.post-title {
   }
 }
 
-
 #nav_icon {
-    width: 45px;
-    position: fixed;
-    left: 20px;
-    top: 5px;
-    z-index: 1;
+  width: 45px;
+  position: fixed;
+  left: 20px;
+  top: 5px;
+  z-index: 1;
 
-    img {
+  img {
     box-sizing:border-box;
     display: block;
     margin: 2px auto;
@@ -234,6 +240,12 @@ h2.project-title, h2.post-title {
   padding: 50px 10px 10px 10px;
 }
 
+#projects_container {
+  width: 80%;
+  margin: 0px auto;
+  padding: 50px 10px 10px 10px;
+}
+
 #container > header {
   position: fixed;
   left: 13%;
@@ -264,7 +276,13 @@ h2.project-title, h2.post-title {
   width: 100%;
 }
 
-.post, .project {
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.post {
   /*border-bottom: 1px solid #eee;*/
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -292,7 +310,80 @@ h2.project-title, h2.post-title {
   }
 }
 
+.project-partial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  margin: 20px 10px 10px 10px;
+  width: 350px;
+}
+
+.project-partial-info {
+  height: 100%;
+  background-color: rgba(255, 255, 255, .7);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  -webkit-transition: all .1s linear;
+}
+
+.project-partial-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+}
+
+.no-show{
+  visibility: hidden;
+  -webkit-transition: all .1s linear;
+}
+
+.project-partial-title {
+  width: 100%;
+  color: $blackish;
+  margin: 0px;
+  height: 30px;
+}
+
+.project-partial-title a {
+  font-weight: 200;
+  font-size: 20px;
+  color: $blackish;
+}
+
+.project-partial-description {
+  padding: 15px;
+  height: 50%;
+}
+
+.project-partial header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.project-partial .project-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 0px;
+  height: 30px;
+}
+
+.project-meta *:last-child {
+  width: 90px;
+}
+
+.project-meta .info {
+  margin-left: 5px;
+  text-align: right;
+}
 
 .header,
 .marketing,
