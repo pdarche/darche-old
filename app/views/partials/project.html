@@ -8,6 +8,9 @@
         </span>
     </header>
     <a href="#/projects/{{project._id}}">
-        <div class="project-partial-image" style="background-image:url({{project.imageUrl}})"></div>
+        <video class="project-partial-image" preload="auto" loop>
+            <source type="video/webm">
+            Sorry, your browser does not support the <code>video</code> tag.
+        </video>
     </a>
 </article>
