@@ -16,19 +16,23 @@ angular
       restrict: 'AEC',
       templateUrl: 'views/partials/project.html',
       link: function(scope, el, attrs){
-        el.on('click', '.delete', function(ev){
-          ev.preventDefault();
-          scope.delete(scope.project);
-        });
+        var video = el.find('video').first();
+        var source = el.find('video source').first();
+
+        video.attr('poster', scope.project.imgUrl);
+        source.attr('src', scope.project.gfycat);
 
         el.on('mouseover', '.project-partial-image', function(ev){
-          var image = "url('" + scope.project.gifUrl + "')"
-          $(ev.target).css("background-image", image);
+          ev.target.play();
         });
 
         el.on('mouseout', '.project-partial-image', function(ev){
-          var image = "url('" + scope.project.imageUrl + "')"
-          $(ev.target).css("background-image", image);
+          ev.target.pause();
+        });
+
+        el.on('click', '.delete', function(ev){
+          ev.preventDefault();
+          scope.delete(scope.project);
         });
       }
     }
