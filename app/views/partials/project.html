@@ -4,7 +4,6 @@
         <span class="project-meta">
             <a ng-if="$root.loggedIn" href="#projects/edit/{{project._id}}" class="info">Edit</a>
             <a ng-if="$root.loggedIn" href="#" class="delete info">Delete</a>
-            <time datetime="{{project.timestamp}}" class="info">{{project.timestamp | date:'MMM yyyy'}}</time>
         </span>
     </header>
     <a href="#/projects/{{project._id}}">
