@@ -47,6 +47,7 @@ body {
 .nav {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 #home_canvas {
@@ -54,6 +55,9 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+  height: 100%;
 }
 
 /*
@@ -98,7 +102,9 @@ body {
 #greeting_container {
   display: flex;
   flex-wrap: wrap;
-  margin: 220px 0px;
+
+  position: relative;
+  top: -7%;
 }
 
 .greeting {
@@ -374,10 +380,6 @@ h2.project-title, h2.post-title {
 
   margin: 0px;
   height: 30px;
-}
-
-.project-meta *:last-child {
-  width: 90px;
 }
 
 .project-meta .info {

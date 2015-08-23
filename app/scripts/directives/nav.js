@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @ngdoc left-nav
+ * @ngdoc nav
  * @name
  * @description
  * # darcheApp
