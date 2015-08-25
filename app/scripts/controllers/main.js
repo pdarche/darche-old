@@ -9,5 +9,5 @@
  */
 angular.module('darcheApp')
   .controller('MainCtrl', ['$scope', function ($scope) {
-  	
+
   }]);
