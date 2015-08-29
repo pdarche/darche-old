@@ -9,7 +9,7 @@
  */
 
 angular.module('darcheApp')
-  .controller('NewProjectCtrl', ['$scope', '$routeParams', '$http', 'Project', function ($scope, $routeParams, $http, Project) {
+  .controller('NewProjectCtrl', ['$scope', '$routeParams', '$http', '$window', 'Project', function ($scope, $routeParams, $http, $window, Project) {
     var projectConfig = {
       title: null,
       description: null,

@@ -28,7 +28,8 @@ angular.module('darcheApp')
       // Boid class
       // Methods for Separation, Cohesion, Alignment added
       sketch.Boid = function(x, y) {
-        this.acceleration = sketch.createVector(5, 5);
+        var xPos = Math.random() * width;
+        this.acceleration = sketch.createVector(0, 0);
         this.velocity = p5.Vector.random2D();
         this.position = sketch.createVector(0, 0);
         this.r = 3.0;
