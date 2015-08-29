@@ -20,7 +20,8 @@ angular
     'pdDirectives',
     'login',
     'logout',
-    'hc.marked'
+    'hc.marked',
+    'angular-p5'
   ])
   .config(['markedProvider', function(markedProvider) {
       markedProvider.setOptions({gfm: true, tables: true});
