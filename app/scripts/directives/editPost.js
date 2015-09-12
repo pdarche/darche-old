@@ -20,9 +20,9 @@ angular
 
           Post.update({id: scope.post._id}, scope.post, function(data){
               scope.post._rev = data.rev;
-              $window.location.href = '/#/blog/' + scope.post._id
+              $window.location.href = '/#/blog/' + scope.post._id;
             }, function(err){
-            alert("Error!");
+              alert("Error!");
           });
         });
       }
