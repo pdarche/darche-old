@@ -16,6 +16,8 @@ angular.module('darcheApp')
       body: null,
       tags: [],
       updates: [],
+      lastUpdated: null,
+      timestamp: new Date().getTime(),
       publish: false
     };
     $scope.project = new Project(projectConfig);

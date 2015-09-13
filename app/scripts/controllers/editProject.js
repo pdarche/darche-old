@@ -14,14 +14,14 @@ angular.module('darcheApp')
 
     $scope.submit = function() {
       var updateTime = new Date().getTime();
-      // push update time to updates array
-      $scope.project.updates.push(updateTime)
-      // add any comments to the comments array
-      // $scope.project.comments = scope.project.comments.split(', ')
-      Project.update({id: $scope.project._id}, $scope.project, function(data){
+
+      $scope.project.updates.push(updateTime);
+      $scope.project.lastUpdated = updateTime;
+
+      Project.update({id: $scope.project._id}, $scope.project, function(data) {
         alert("Saved successfully");
         $scope.project._rev = data.rev;
-      }, function(err){
+      }, function(err) {
         alert("Error!");
       });
     }
