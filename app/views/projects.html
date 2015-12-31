@@ -1,11 +1,8 @@
 <div id="projects_container">
-<!-- 	<header>
-		<h1 class="page-title">Projects</h1>
-	</header> -->
-	<ul class="inline-nav">
-		<li ng-if="$root.loggedIn" class="nav-li"><a href="/#/projects/new/project">New</a></li>
-		<li ng-if="$root.loggedIn" class="nav-li"><a href="/#/drafts/projects">Drafts</a></li>
-	</ul>
+    <ul class="content-menu">
+        <li ng-if="$root.loggedIn" class="content-menu__li"><a href="/#/blog/new/post" class="content-menu__a">New</a></li>
+        <li ng-if="$root.loggedIn" class="content-menu__li"><a href="/#/drafts/blog" class="content-menu__a">Drafts</a></li>
+    </ul>
 	<div class="projects">
 		<pd-project class="project-partial" ng-repeat="project in projects | orderBy:'timestamp':true"></pd-project>
 	</div>

@@ -1,15 +1,15 @@
 <nav class="nav">
-    <div id="nav_icon">
-        <div id="icon"></div>
+    <div class="nav-icon">
+        <div class="nav-icon__icon"></div>
     </div>
-    <div id="nav_bar" class="not-shown">
-        <div id="nav_menu">
-        	<ul class="nav-ul inline-nav">
-        		<li class="nav-li"><a href="/">Darche</a></li>
-        		<li class="nav-li"><a href="/#/blog">Blog</a></li>
-        		<li class="nav-li"><a href="/#/projects">Projects</a></li>
-        		<!-- <li class="nav-li"><a href="/#/login">Login</a></li> -->
-        		<li ng-if="$root.loggedIn" class="nav-li" id="logout"><a href="/#/logout">Logout</a></li>
+    <div class="nav-bar nav-bar--hidden">
+        <div class="nav-menu">
+        	<ul class="nav-menu__ul">
+        		<li class="nav-menu__li"><a class="nav-menu__a" href="/">Darche</a></li>
+        		<li class="nav-menu__li"><a class="nav-menu__a" href="/#/blog">Blog</a></li>
+        		<li class="nav-menu__li"><a class="nav-menu__a" href="/#/projects">Projects</a></li>
+        		<!-- <li class="nav-menu__li"><a class="nav-menu__a" href="/#/login">Login</a></li> -->
+        		<li ng-if="$root.loggedIn" id="logout" class="nav-menu__li"><a class="nav-menu__a" href="/#/logout">Logout</a></li>
         	</ul>
         </div>
     </div>

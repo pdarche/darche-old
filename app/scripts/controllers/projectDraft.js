@@ -11,7 +11,7 @@
 angular.module('darcheApp')
   .controller('DraftProjectCtrl', ['$scope', '$http', 'Project', function ($scope, $http, Project) {
     var projects = Project.query({publish:true}, function(){
-      // I want this to be intercepted!
+      // REFACTOR: this should be done by a couch view
       $scope.projects = projects.rows.map(function(row){ return row.doc; })
                           .filter(function(doc){ return doc.publish === false; });
 

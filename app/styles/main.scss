@@ -3,11 +3,16 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
-//variables
+// Variables
 $blackish: #333;
 $pad: 20px;
 
-//base
+/*
+* BASE
+*
+*
+*
+*/
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -29,7 +34,13 @@ body {
   left: 0;
 }
 
-//layout
+/*
+* LAYOUT
+*
+*
+*
+*/
+
 .container {
   width: 100%;
   height: 100%;
@@ -44,10 +55,16 @@ body {
   padding: 0px;
 }
 
-.nav {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+#container {
+  max-width:700px;
+  margin: 0px auto;
+  padding: 50px 10px 10px 10px;
+}
+
+#projects_container {
+  max-width: 1130px;
+  margin: 0px auto;
+  padding: 50px 10px 10px 10px;
 }
 
 #home_canvas {
@@ -60,51 +77,22 @@ body {
   height: 100%;
 }
 
-/*
-[class*='col-'] {
-  padding-right: $pad;
-  .grid &:last-of-type {
-    padding-right: 0;
-  }
-}
-*/
-
-.col-2-3 {
-  width: 66.66%;
-}
-
-.col-1-3 {
-  width: 33.33%;
-}
-
-.col-1-2 {
-  width: 50%;
-}
-
-.col-1-4 {
-  width: 25%;
-}
-
-.col-1-8 {
-  width: 12.5%;
-}
-
-//modules
-
 #defaultCanvas {
   position: fixed;
   top: 0px;
   left: 0px;
 }
 
-.nav-li a {
-  color: #333;
-  font-weight: 600;
-}
 
-.neg-seventy {
-  top: -70px;
-}
+
+/*
+* MODULES
+*
+*
+*
+*/
+
+// Greeting
 
 #greeting_container {
   display: flex;
@@ -128,169 +116,162 @@ body {
   margin-left: 20px;
 }
 
-h2.project-title, h2.post-title {
-  font-weight: 500;
 
-  a {
-    color: $blackish;
-  }
-}
 
-#login_form {
-  width: 40%;
+// Login Form
+
+.login-form {
+  width: 300px;
   margin: 20px auto;
-  padding: 10px;
-
-  input {
-    width: 100%;
-    margin: 5px 0px;
-    height: 40px;
-  }
 }
 
-.inline-nav {
-  list-style-type: none;
+.login-form__input {
+  width: 100%;
+  margin: 5px 0px;
+  height: 40px;
+}
+
+.login-form__btn {
+  width: 100%;
+}
+
+
+
+// Navigation
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+// Nav Bar
+.nav-bar {
+  position: relative;
+  top: 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 100%;
+  height: 45px;
+  padding: 5px 0px;
+
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  transition: all .1s linear;
+}
+
+.nav-bar--hidden {
+  top: -60px;
+  transition: all .1s linear;
+}
+
+
+// Nav Menu
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu__ul {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+  margin: 0px;
   padding: 0px;
 
-  li {
-    display: inline-block;
-    margin-right: 10px;
-  }
+  list-style-type: none;
 }
 
-#nav_icon {
-  width: 40px;
-  height: 25px;
+.nav-menu__li {
+  height: 100%;
+  padding: 0px 10px;
+
+  text-align: center;
+}
+
+.nav-menu__a {
+  color: #333;
+  font-weight: 600;
+}
+
+
+
+// Nav Icon
+.nav-icon {
   position: fixed;
   left: 10px;
   top: 10px;
   z-index: 2;
 
-  #icon {
-    border: 2px solid black;
-    width: 25px;
-    left: 7px;
-    top: 10px;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: -2px;
-      top: .4em;
-      border: 2px solid black;
-      width: 25px;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      left: -2px;
-      bottom: .4em;
-      border: 2px solid black;
-      width: 25px;
-    }
-  }
+  width: 40px;
+  height: 25px;
 
   &:hover {
     cursor: pointer;
   }
 }
 
-#nav_bar {
+.nav-icon__icon {
   position: relative;
-  top: 0px;
+  left: 7px;
+  top: 10px;
+  width: 25px;
+  border: 2px solid black;
 
-  width: 100%;
-  height: 45px;
-  padding: 5px 0px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  border-bottom: 1px solid #ccc;
-  transition: all .1s linear;
-  background-color: white;
-
-  #nav_menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      padding: 0px;
-      margin: 0px;
-      list-style-type: none;
-      height: 100%;
-
-      li {
-        text-align: center;
-        height: 100%;
-        padding: 0px 10px;
-      }
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    top: .4em;
+    left: -2px;
+    width: 25px;
+    border: 2px solid black;
   }
 
-  &.not-shown {
-    top: -60px;
-    transition: all .1s linear;
+  &:after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: .4em;
+    border: 2px solid black;
+    width: 25px;
   }
 }
 
-.border-bottom {
-  border-bottom: 1px solid #ccc;
-}
 
-/* this should be a mixin! */
-.big-serif {
-  font-family: Georgia, "Cambria", serif;
-  font-size: 18px;
-}
+
+// Editor
 
 .post-input, .project-input {
   width: 100%;
-  border: 1px solid #eee;
   margin: 0px 0px 20px 0px;
+  border: 1px solid #eee;
 }
 
 .title-input {
+  width: 100%;
+  margin: 0px 0px 20px 0px;
   font-size: 30px;
+  border: 1px solid #eee;
 }
 
-#editor {
+.content-editor {
   height: 500px;
   width: 100%;
+
+  margin: 0px 0px 20px 0px;
+  border: 1px solid #eee;
 }
 
-#container {
-  width:50%;
-  margin: 0px auto;
-  padding: 50px 10px 10px 10px;
-}
 
-#projects_container {
-  width: 80%;
-  margin: 0px auto;
-  padding: 50px 10px 10px 10px;
-}
 
-#container > header {
-  position: fixed;
-  left: 13%;
-}
-
-.page-title {
-  font-size: 45px;
-  margin: 10px 0px;
-}
-
-.inline-block {
-  display: inline-block;
-}
+// Flag
 
 .flag {
   background-color: #eee;
@@ -302,11 +283,27 @@ h2.project-title, h2.post-title {
   height: 40px;
 }
 
-/* Blog Posts */
 
-.posts, .projects {
-  width: 100%;
+
+// Content Menu
+.content-menu {
+  list-style-type: none;
+  margin: 10px 0px;
+  padding: 0px;
 }
+
+.content-menu__li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.content-menu__a {
+  color: #333;
+  font-weight: 600;
+}
+
+
+// Projects Page
 
 .projects {
   display: flex;
@@ -314,44 +311,102 @@ h2.project-title, h2.post-title {
   flex-wrap: wrap;
 }
 
-.post {
-  /*border-bottom: 1px solid #eee;*/
+
+// Post/Project Single Page
+
+/* this should be a mixin! */
+.big-serif {
+  font-family: Georgia, "Cambria", serif;
+  font-size: 18px;
+}
+
+
+// Single Blog Post / Project pages
+
+.post, .project {
   margin-bottom: 20px;
   padding-bottom: 20px;
-
-  .post-meta, .project-meta {
-    color: #999;
-    font-size: 90%;
-    margin: 0;
-  }
-
-  .post-description, .project-description {
-    font-family: Georgia, "Cambria", serif;
-    font-size: 16px;
-    color: #444;
-    line-height: 1.8em
-  }
-
-  .post-body, .project-body {
-    /* border-top: 1px solid #eee; */
-    font-family: Georgia, "Cambria", serif;
-    font-size: 20px;
-    margin: 20px auto;
-    padding-top: 10px;
-    /*width: 80%;*/
-  }
 }
+
+.post__title, .project__title {
+  font-size: 45px;
+  margin: 10px 0px;
+}
+
+.post__meta, .project__meta {
+  color: #999;
+  font-size: 90%;
+  margin: 0;
+}
+
+.post__body, project__body {
+  font-family: Georgia, "Cambria", serif;
+  font-size: 20px;
+  margin: 20px auto;
+  padding-top: 10px;
+}
+
+// Blog Post Partial
+.post-partial {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.post-partial__title {
+  font-weight: 500;
+}
+
+.post-partial__a {
+  color: $blackish;
+}
+
+.post-partial__meta {
+  color: #999;
+  font-size: 90%;
+  margin: 0;
+}
+
+.post-partial__description {
+  font-family: Georgia, "Cambria", serif;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8em
+}
+
+// Projects Partial
 
 .project-partial {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: space-between;
 
   margin: 20px 10px 10px 10px;
-  width: 350px;
+  max-width: 350px;
 }
 
-.project-partial-info {
+project-partial__title {
+  width: 100%;
+  color: $blackish;
+  margin: 0px;
+  height: 30px;
+}
+
+.project-partial__title-a {
+  font-weight: 200;
+  font-size: 20px;
+  color: $blackish;
+}
+
+.project-partial__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.project-partial__info {
   height: 100%;
   background-color: rgba(255, 255, 255, .7);
 
@@ -362,95 +417,67 @@ h2.project-title, h2.post-title {
   -webkit-transition: all .1s linear;
 }
 
-.project-partial-image {
+.project-partial__meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-partial__info {
+  margin-left: 5px;
+  text-align: right;
+}
+
+.project-partial__image {
   width: 100%;
-  height: 200px;
   background-size: cover;
 }
+
 
 .no-show{
   visibility: hidden;
   -webkit-transition: all .1s linear;
 }
 
-.project-partial-title {
-  width: 100%;
-  color: $blackish;
-  margin: 0px;
-  height: 30px;
-}
 
-.project-partial-title a {
-  font-weight: 200;
-  font-size: 20px;
-  color: $blackish;
-}
-
-.project-partial-description {
-  padding: 15px;
-  height: 50%;
-}
-
-.project-partial header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-}
-
-.project-partial .project-meta {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  margin: 0px;
-  height: 30px;
-}
-
-.project-meta .info {
-  margin-left: 5px;
-  text-align: right;
-}
-
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
+/*
+* RESPONSIVE
+*
+*
+*
+*/
 
 @media screen and (max-width: 600px) {
-
   #container {
    width: 100%;
    padding: 50px 20px 10px 20px;
   }
 }
+
+@media screen and (max-width: 1130px) {
+  .project-partial {
+   max-width: 400px;
+  }
+
+  .flag {
+    position: fixed;
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .projects {
+   display: flex;
+   justify-content: center;
+  }
+
+  .project-partial {
+   max-width: 600px;
+  }
+}
+
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
