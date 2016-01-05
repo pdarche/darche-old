@@ -1,4 +1,4 @@
-"use-strict"
+'use-strict';
 
 angular.module('darcheApp')
   .factory('flocking', function() {
@@ -23,7 +23,6 @@ angular.module('darcheApp')
           boids[i].run(boids);
         }
       }
-
 
       // Boid class
       // Methods for Separation, Cohesion, Alignment added

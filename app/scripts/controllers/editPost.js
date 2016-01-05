@@ -14,7 +14,6 @@ angular.module('darcheApp')
 
     $scope.submit = function() {
       var updateTime = new Date().getTime();
-
       $scope.post.updates.push(updateTime);
       $scope.post.lastUpdated = updateTime;
 
