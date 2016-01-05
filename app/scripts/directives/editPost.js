@@ -18,6 +18,10 @@ angular
         el.on('click', '#preview', function(ev){
           ev.preventDefault();
 
+          var updateTime = new Date().getTime();
+          scope.post.updates.push(updateTime);
+          scope.post.lastUpdated = updateTime;
+
           Post.update({id: scope.post._id}, scope.post, function(data){
               scope.post._rev = data.rev;
               $window.location.href = '/#/blog/' + scope.post._id;

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @ngdoc shared-properties factor
+ * @ngdoc shared-properties factory
  * @name
  * @description
  * darcheApp

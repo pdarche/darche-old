@@ -5,9 +5,8 @@
  * @name darcheApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the darcheApp
+ * This where the magic happens :)
  */
-angular.module('darcheApp')
-  .controller('MainCtrl', ['$scope', function ($scope) {
 
-  }]);
+angular.module('darcheApp')
+  .controller('MainCtrl', ['$scope', function ($scope) {}]);

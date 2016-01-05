@@ -14,7 +14,6 @@ angular.module('darcheApp')
     request: function (request) {
       var protectedRoutes = /new|edit|drafts/g;
       if ($window.sessionStorage.token && !$rootScope.loggedIn){
-        console.log('token is', $window.sessionStorage.token)
         $rootScope.loggedIn = true;
       }
       if (!$window.sessionStorage.token && $location.path().search(protectedRoutes) !== -1) {

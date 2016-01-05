@@ -15,24 +15,20 @@ angular
     return {
       templateUrl: 'views/nav.html',
       link: function(scope, el, attrs){
-        el.on('click', '.nav-icon', function(ev){
-          var menu = $('.nav-bar');
+        var menu = $('.nav-bar');
 
+        el.on('click', '.nav-icon', function(ev){
           menu.hasClass('nav-bar--hidden') ?
             menu.removeClass('nav-bar--hidden') :
             menu.addClass('nav-bar--hidden');
         });
 
         scope.$on('home', function(ev){
-          var menu = $('.nav-bar');
-
           menu.hasClass('nav-bar--hidden') ?
             null : menu.addClass('nav-bar--hidden');
         });
 
         scope.$on('not-home', function(ev){
-          var menu = $('.nav-bar');
-
           menu.hasClass('nav-bar--hidden') ?
             menu.removeClass('nav-bar--hidden') : null;
         });

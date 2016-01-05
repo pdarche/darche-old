@@ -5,13 +5,8 @@
  * @name darcheApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the darcheApp
+ * You might want to put something about yourself here
  */
+
 angular.module('darcheApp')
-  .controller('AboutCtrl', ['$scope', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  }]);
+  .controller('AboutCtrl', ['$scope', function ($scope) {}]);

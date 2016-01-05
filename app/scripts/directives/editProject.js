@@ -18,6 +18,10 @@ angular
         el.on('click', '#preview', function(ev){
           ev.preventDefault();
 
+          var updateTime = new Date().getTime();
+          scope.project.updates.push(updateTime);
+          scope.project.lastUpdated = updateTime;
+
           Project.update({id: scope.project._id}, scope.project, function(data) {
               scope.project._rev = data.rev;
               $window.location.href = '/#/projects/' + scope.project._id;
