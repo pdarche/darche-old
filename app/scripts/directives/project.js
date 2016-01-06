@@ -19,14 +19,14 @@ angular
         var video = el.find('video').first();
         var source = el.find('video source').first();
 
-        video.attr('poster', scope.project.imgUrl);
+        video.attr('poster', scope.project.imageUrl);
         source.attr('src', scope.project.gfycat);
 
-        el.on('mouseover', '.project-partial-image', function(ev){
+        el.on('mouseover', '.project-partial__image', function(ev){
           ev.target.play();
         });
 
-        el.on('mouseout', '.project-partial-image', function(ev){
+        el.on('mouseout', '.project-partial__image', function(ev){
           ev.target.pause();
         });
 
