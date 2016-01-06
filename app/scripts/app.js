@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('darcheApp', [
     'http-auth-interceptor',
