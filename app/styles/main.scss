@@ -281,13 +281,31 @@ body {
   background-color: #eee;
   padding: 10px;
   position: fixed;
-  top: 50%;
+  top: 47%;
   left: 13%;
   width: 100px;
   height: 40px;
 }
 
+.editor-save {
+  top: 53%;
 
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.editor-save__save {
+  float: left;
+}
+
+.editor-save__icon {
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+  float: right;
+  background-size: cover;
+}
 
 // Content Menu
 .content-menu {
@@ -446,6 +464,10 @@ project-partial__title {
   -webkit-transition: all .1s linear;
 }
 
+.editor-save-button {
+
+}
+
 
 /*
 * RESPONSIVE
@@ -466,7 +488,7 @@ project-partial__title {
    max-width: 400px;
   }
 
-  .flag {
+  .flag, .editor-save-button {
     position: fixed;
     left: 0px;
   }
