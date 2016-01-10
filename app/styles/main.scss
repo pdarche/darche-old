@@ -4,9 +4,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 // Variables
 $blackish: #333;
 $pad: 20px;
+$sans-font: "Open Sans";
 
 /*
 * BASE
@@ -84,6 +88,12 @@ body {
   left: 0px;
 }
 
+#footer {
+  position: fixed;
+  bottom:10px;
+  width: 100%;
+  height: 30px;
+}
 
 
 /*
@@ -103,13 +113,15 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  padding: 50px;
-  background-color: rgba(255, 255, 255, .25);
+  padding: 30px 30px 50px 30px;
+  background-color: rgba(255, 255, 255, .3);
 }
 
 .greeting {
   font-size: 150px;
   line-height: 80%;
+  font-family: "Open Sans";
+  font-weight: 300;
 }
 
 .intro {
@@ -117,10 +129,24 @@ body {
   align-items: flex-end;
 
   font-size: 20px;
+  font-family: $sans-font;
   margin-left: 20px;
+  max-width: 300px;
+
 }
 
+// Links
 
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  margin: 0px 8px;
+  font-size: 22px;
+  color: #ccc;
+}
 
 // Login Form
 
@@ -203,6 +229,7 @@ body {
 .nav-menu__a {
   color: #333;
   font-weight: 600;
+  font-family: $sans-font;
 }
 
 
@@ -353,18 +380,23 @@ body {
 .post__title, .project__title {
   font-size: 45px;
   margin: 10px 0px;
+
+  font-family: $sans-font;
 }
 
 .post__meta, .project__meta {
+  margin: 0;
+
   color: #999;
   font-size: 90%;
-  margin: 0;
+  font-family: $sans-font;
 }
 
 .post__body, .project__body {
-  font-family: Georgia, "Cambria", serif;
-  font-size: 20px;
-  margin: 20px auto;
+  /*font-family: Georgia, "Cambria", serif;*/
+  font-family: $sans-font;
+  font-size: 18px;
+  margin: 0px auto;
   padding-top: 10px;
 }
 
@@ -376,6 +408,7 @@ body {
 
 .post-partial__title {
   font-weight: 500;
+  font-family: $sans-font;
 }
 
 .post-partial__a {
@@ -384,13 +417,16 @@ body {
 }
 
 .post-partial__meta {
+  margin: 0;
+
   color: #999;
   font-size: 90%;
-  margin: 0;
+  font-family: $sans-font;
 }
 
 .post-partial__description {
-  font-family: Georgia, "Cambria", serif;
+  /*font-family: Georgia, "Cambria", serif;*/
+  font-family: $sans-font;
   font-size: 16px;
   color: #444;
   line-height: 1.8em
@@ -410,14 +446,16 @@ body {
 
 project-partial__title {
   width: 100%;
-  color: $blackish;
-  margin: 0px;
   height: 30px;
+  margin: 0px;
+
+  color: $blackish;
 }
 
 .project-partial__title-a {
   font-weight: 200;
   font-size: 20px;
+  font-family: $sans-font;
   color: $blackish;
 }
 
@@ -446,6 +484,8 @@ project-partial__title {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  font-family: $sans-font
 }
 
 .project-partial__info {
