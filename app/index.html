@@ -14,6 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="darcheApp">
@@ -24,6 +25,13 @@
     <div class="container">
       <div pd-nav></div>
       <div ng-view="" id="app"></div>
+      <div id="footer">
+        <div class="links">
+            <a class="link" href="https://github.com/pdarche" target="_blank"><i size="3" class="fa fa-github"></i></a>
+            <a class="link" href="https://twitter.com/pdarche" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a class="link" href="mailto:pdarche@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
