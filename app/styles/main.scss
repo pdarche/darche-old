@@ -442,6 +442,8 @@ body {
 
   margin: 20px 10px 10px 10px;
   max-width: 350px;
+  max-height: 350px;
+  overflow: hidden;
 }
 
 project-partial__title {
@@ -480,6 +482,11 @@ project-partial__title {
   -webkit-transition: all .1s linear;
 }
 
+.project-partial__info {
+  margin-left: 5px;
+  text-align: right;
+}
+
 .project-partial__meta {
   display: flex;
   flex-direction: row;
@@ -488,14 +495,11 @@ project-partial__title {
   font-family: $sans-font
 }
 
-.project-partial__info {
-  margin-left: 5px;
-  text-align: right;
-}
-
 .project-partial__image {
   width: 100%;
+  height: 250px;
   background-size: cover;
+  object-fit: cover;
 }
 
 
