@@ -14,9 +14,9 @@
     "angular-route": "1.2.16",
     "angular-http-auth": "~1.2.2",
     "angular-marked": "0.0.12",
-    "pure": "~0.5.0",
-    "marked": "0.3.2",
     "lodash": "2.4.1",
+    "marked": "0.3.2",
+    "pure": "~0.5.0",
     "p5js": "0.4.8",
     "angular-p5.js": "0.0.1"
   },
