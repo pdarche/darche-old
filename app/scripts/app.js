@@ -25,7 +25,13 @@ angular
     'angular-p5'
   ])
   .config(['markedProvider', function(markedProvider) {
-      markedProvider.setOptions({gfm: true, tables: true});
+      markedProvider.setOptions({
+        gfm: true,
+        tables: true,
+        highlight: function (code, lang) {
+          return hljs.highlight('python', code, true).value;
+        }
+      });
     }])
   .config(['$routeProvider', '$httpProvider', '$locationProvider', function ($routeProvider, $httpProvider, $locationProvider) {
     $httpProvider.interceptors.push('AuthInterceptor');
