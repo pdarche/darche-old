@@ -229,14 +229,15 @@ pre {
 .nav-menu__li {
   height: 100%;
   padding: 0px 10px;
-
   text-align: center;
+  display: flex;
 }
 
 .nav-menu__a {
   color: #333;
   font-weight: 600;
   font-family: $sans-font;
+  align-self: center;
 }
 
 
